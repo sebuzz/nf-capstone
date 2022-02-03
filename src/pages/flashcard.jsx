@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
-import Flashcard from "../molecules/flashcard";
+import Flashcard from "../organisms/flashcard";
 import useStore from "../ions/store/store";
+// ******
+// OLD UNUSED VERSION
+// ******
 
 const randomCard = maxCard => {
 	return Math.floor(Math.random() * maxCard) + 1;
