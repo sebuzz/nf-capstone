@@ -3,10 +3,7 @@ import React, { useEffect } from "react";
 import Layout from "../organisms/layout";
 import Flashcard from "../organisms/flashcard";
 import useStore from "../ions/store/store";
-
-const randomCardNumber = maxCard => {
-	return Math.floor(Math.random() * maxCard) + 1;
-};
+import randomCardNumber from "../ions/utils/randomCardNumber";
 
 const Page = () => {
 	const setCurrentCard = useStore(state => state.setCurrentCard);
