@@ -1,10 +1,10 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
 import Layout from "../organisms/layout";
-import Flashcard from "../molecules/flashcard";
+import Flashcard from "../organisms/flashcard";
 import useStore from "../ions/store/store";
 
-const randomCard = maxCard => {
+const randomCardNumber = maxCard => {
 	return Math.floor(Math.random() * maxCard) + 1;
 };
 
@@ -13,7 +13,7 @@ const Page = () => {
 	const currentCard = useStore(state => state.currentCard);
 
 	useEffect(() => {
-		setCurrentCard(randomCard(48));
+		setCurrentCard(randomCardNumber(48));
 	}, []);
 
 	return (
@@ -35,7 +35,7 @@ const Page = () => {
 				word={currentCard.word}
 				kanji={currentCard.kanji}
 				meaning={currentCard.meaning}
-				random={randomCard(48)}
+				random={randomCardNumber(48)}
 			/>
 		</Layout>
 	);
