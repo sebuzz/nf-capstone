@@ -13,7 +13,6 @@ const CardHeader = ({ ...props }) => {
 				height="auto"
 				image="/images/flashcard.png"
 				alt={props.lesson}
-				// number={currentCard.vocabularyNo}
 			/>
 			<VocabularyNoHolder>{currentCard.vocabularyNo}</VocabularyNoHolder>
 		</>
