@@ -10,8 +10,8 @@ const Page = () => {
 	return (
 		<Layout>
 			<Head>
-				<title key="title">My Project</title>
-				<meta key="description" name="description" content="This is my project" />
+				<title key="title">KOTOBA</title>
+				<meta key="description" name="description" content="This is my capstone project" />
 			</Head>
 			<h1>Home</h1>
 			{loading && <div>Loading...</div>}
