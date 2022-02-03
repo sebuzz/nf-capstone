@@ -1,53 +1,28 @@
-import React, {useEffect, useState} from "react";
-//import Link from "next/link";
+import React, { useEffect } from "react";
 import Flashcard from "../molecules/flashcard";
-import axios from "axios";
+import useStore from "../ions/store/store";
 
-
+const randomCard = maxCard => {
+	return Math.floor(Math.random() * maxCard) + 1;
+};
 
 const Page = () => {
+	const setCurrentCard = useStore(state => state.setCurrentCard);
+	const currentCard = useStore(state => state.currentCard);
 
-	const [thisCard, setThisCard] = useState([]);
-
-	const getVocabulary = async function (cardNumber) {
-		await axios.get("/vocabulary/japanese/9.json").then(
-			response => {
-				const result = response.data;
-				const lessonData = result.vocabulary;
-				const cardData = lessonData[cardNumber];
-				console.log("result:",result);
-				console.log("lessonData:",lessonData);
-				console.log("cardData:",cardData);
-
-				setThisCard(cardData);
-				return cardData;
-			},
-			error => {
-				console.log(error);
-			}
-		);
-	};
-
-
-	const NextCard = () => {
-		useEffect(() => {
-			const randomCard = Math.floor(Math.random()*48) + 1;
-			console.log(randomCard);
-			getVocabulary(randomCard);
-		}, []);
-	}
-	NextCard();
-
-
-	const lesson = thisCard.lesson;
-	console.log("lesson: ", lesson);
-	const word = thisCard.word;
-	const kanji = thisCard.kanji;
-	const meaning = thisCard.meaning;
+	useEffect(() => {
+		setCurrentCard(randomCard(48));
+	}, []);
 
 	return (
 		<div>
-			<Flashcard title={lesson} word={word} kanji={kanji} meaning={meaning} handler={NextCard} />
+			<Flashcard
+				title={currentCard.lesson}
+				word={currentCard.word}
+				kanji={currentCard.kanji}
+				meaning={currentCard.meaning}
+				random={randomCard(48)}
+			/>
 			{/*<Link href="#">Foobar</Link>*/}
 		</div>
 	);
