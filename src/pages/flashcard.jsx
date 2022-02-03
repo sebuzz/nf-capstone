@@ -1,6 +1,4 @@
-import Head from "next/head";
 import React, { useEffect } from "react";
-import Layout from "../organisms/layout";
 import Flashcard from "../molecules/flashcard";
 import useStore from "../ions/store/store";
 
@@ -17,19 +15,7 @@ const Page = () => {
 	}, []);
 
 	return (
-		<Layout>
-			<Head>
-				<title key="title">KOTOBA</title>
-				<meta key="description" name="description" content="This is my capstone project" />
-			</Head>
-			{/*<h1>Home</h1>*/}
-			{/*{loading && <div>Loading...</div>}*/}
-			{/*{error && <div>{error.message}</div>}*/}
-			{/*{data && (*/}
-			{/*	<pre>*/}
-			{/*		<code>{JSON.stringify(data, null, 4)}</code>*/}
-			{/*	</pre>*/}
-			{/*)}*/}
+		<div>
 			<Flashcard
 				title={currentCard.lesson}
 				word={currentCard.word}
@@ -37,7 +23,8 @@ const Page = () => {
 				meaning={currentCard.meaning}
 				random={randomCard(48)}
 			/>
-		</Layout>
+			{/*<Link href="#">Foobar</Link>*/}
+		</div>
 	);
 };
 
