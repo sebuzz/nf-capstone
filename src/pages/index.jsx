@@ -10,10 +10,8 @@ const Page = () => {
 	const setCurrentCard = useStore(state => state.setCurrentCard);
 	const currentCard = useStore(state => state.currentCard);
 	const lessonData = useStore(state => state.lessonData);
-	const filteredData = useStore(state => state.filteredData);
 	const setFilter = useStore(state => state.setFilter);
 	const toggleFiltered = useStore(state => state.toggleFiltered);
-	const filtered = useStore(state => state.filtered);
 	const setLessonData = useStore(state => state.setLessonData);
 
 	// fetch lesson data once
