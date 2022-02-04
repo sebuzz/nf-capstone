@@ -41,3 +41,8 @@ cypress/cucumber-json
 
 # IDE
 .idea
+
+# tools
+src/pages/api/wordgrammar.js
+src/pages/wordgrammar.js
+
