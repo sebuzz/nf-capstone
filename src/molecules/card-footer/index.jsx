@@ -2,9 +2,17 @@ import useStore from "../../ions/store/store";
 import { Button, CardActions } from "@mui/material";
 import * as React from "react";
 import Stack from "@mui/material/Stack";
+import randomCardNumber from "../../ions/utils/randomCardNumber";
 
 const CardFooter = ({ ...props }) => {
 	const setCurrentCard = useStore(state => state.setCurrentCard);
+	const lessonData = useStore(state => state.lessonData);
+
+	const nextCard = () => {
+		const currentCardNo = lessonData[randomCardNumber(lessonData.length - 1)];
+		console.log("currentCardNo:", currentCardNo);
+		setCurrentCard(currentCardNo);
+	};
 	return (
 		<CardActions>
 			<Stack
@@ -18,7 +26,7 @@ const CardFooter = ({ ...props }) => {
 					size="small"
 					color="primary"
 					onClick={() => {
-						setCurrentCard(props.random);
+						nextCard();
 					}}
 				>
 					Next card
@@ -28,7 +36,6 @@ const CardFooter = ({ ...props }) => {
 					size="small"
 					color="primary"
 					onClick={() => {
-						setCurrentCard(props.random);
 						console.log("CORRECT");
 					}}
 				>
@@ -38,7 +45,6 @@ const CardFooter = ({ ...props }) => {
 					size="small"
 					color="primary"
 					onClick={() => {
-						setCurrentCard(props.random);
 						console.log("INCORRECT");
 					}}
 				>
@@ -49,7 +55,6 @@ const CardFooter = ({ ...props }) => {
 					size="small"
 					color="primary"
 					onClick={() => {
-						setCurrentCard(props.random);
 						console.log("FLIP CARD");
 					}}
 				>

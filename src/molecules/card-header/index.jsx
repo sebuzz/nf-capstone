@@ -14,7 +14,7 @@ const CardHeader = ({ ...props }) => {
 				image="/images/flashcard.png"
 				alt={props.lesson}
 			/>
-			<VocabularyNoHolder>{currentCard.vocabularyNo}</VocabularyNoHolder>
+			<VocabularyNoHolder>{currentCard?.vocabularyNo}</VocabularyNoHolder>
 		</>
 	);
 };

@@ -4,6 +4,7 @@ import Layout from "../organisms/layout";
 import Flashcard from "../organisms/flashcard";
 import useStore from "../ions/store/store";
 import randomCardNumber from "../ions/utils/randomCardNumber";
+import axios from "axios";
 
 const Page = () => {
 	const setCurrentCard = useStore(state => state.setCurrentCard);
@@ -13,15 +14,29 @@ const Page = () => {
 	const setFilter = useStore(state => state.setFilter);
 	const toggleFiltered = useStore(state => state.toggleFiltered);
 	const filtered = useStore(state => state.filtered);
+	const setLessonData = useStore(state => state.setLessonData);
 
+	// fetch lesson data once
+	useEffect(async () => {
+		console.log("attempting initial fetch lesson data");
+		const response = await axios.get("/vocabulary/japanese/9.json");
+		const result = response.data;
+		const lessonData = result.vocabulary;
+		setLessonData(lessonData);
+	}, []);
+
+	// Initialize Card on page load
 	useEffect(() => {
-		setCurrentCard(randomCardNumber(lessonData.length));
-	}, [setCurrentCard, lessonData.length]);
+		const currentCardNo = lessonData[randomCardNumber(lessonData.length - 1)];
+		console.log("cCN:", currentCardNo);
+		setCurrentCard(currentCardNo);
+		console.log("currentCard:", currentCard);
+	}, [lessonData]);
 
 	return (
 		<Layout>
 			<button
-				type={"button"}
+				type="button"
 				onClick={() => {
 					toggleFiltered();
 					setFilter("kanji");
@@ -44,10 +59,10 @@ const Page = () => {
 			{/*	</pre>*/}
 			{/*)}*/}
 			<Flashcard
-				title={currentCard.lesson}
-				word={currentCard.word}
-				kanji={currentCard.kanji}
-				meaning={currentCard.meaning}
+				title={currentCard?.lesson}
+				word={currentCard?.word}
+				kanji={currentCard?.kanji}
+				meaning={currentCard?.meaning}
 				random={randomCardNumber(48)}
 			/>
 		</Layout>
