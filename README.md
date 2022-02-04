@@ -1,8 +1,10 @@
 # My Capstone Project
 
 This is a Japanese Vocabulary learning App.
-This pull request contains the first steps, displaying a simple flash card, which fetches random words from the database.
+This first iteration contains the first steps, displaying a simple flash card, which fetches random words from the database.
 On each button click, a new card is being displayed.
+
+More features are being added on a daily basis.
 
 Have fun learning some Japanese words! :)
 
