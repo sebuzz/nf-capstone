@@ -27,6 +27,7 @@ const Page = () => {
 
 	// Initialize Card on page load
 	useEffect(() => {
+		// TODO: test if filter is set and then maybe use filteredLesson
 		const currentCardNo = lessonData[randomCardNumber(lessonData.length - 1)];
 		console.log("cCN:", currentCardNo);
 		setCurrentCard(currentCardNo);
@@ -40,8 +41,8 @@ const Page = () => {
 				onClick={() => {
 					toggleFiltered();
 					setFilter("kanji");
-					console.log(filteredData);
-					console.log("filtered:", filtered);
+					// console.log(filteredData);
+					// console.log("filtered:", filtered);
 				}}
 			>
 				Kanji

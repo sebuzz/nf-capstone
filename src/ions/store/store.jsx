@@ -1,5 +1,4 @@
 import create from "zustand";
-import axios from "axios";
 import produce from "immer";
 
 const useStore = create(set => ({
@@ -30,17 +29,16 @@ const useStore = create(set => ({
 				return {
 					filteredData: kanjiFilter,
 				};
+			} else {
+				return {
+					filteredData: clone,
+				};
 			}
 		});
 	},
 	setLessonData: lessonData => {
-		// console.log("attempting to fetch lesson data");
-		// const response = await axios.get("/vocabulary/japanese/9.json");
-		// const result = response.data;
-		// const lessonData = result.vocabulary;
-
 		set(() => ({ lessonData: lessonData }));
-		console.log("lessonData:", lessonData);
+		//console.log("lessonData:", lessonData);
 	},
 
 	currentCard: {
@@ -52,15 +50,8 @@ const useStore = create(set => ({
 		word: "",
 		vocabularyNo: 1,
 	},
-	// fetch the lesson data and pick the selected card
-	// TODO: separate fetch and card picking so that the fetch only happens once
+	// set the current card data to the incoming data
 	setCurrentCard: cardData => {
-		// console.log("attempting to fetch");
-		// const response = await axios.get("/vocabulary/japanese/9.json");
-		// const result = response.data;
-		// const lessonData = result.vocabulary;
-		// const cardData = lessonData[cardNumber];
-		//
 		console.log("setting currentCard", cardData);
 		set(() => ({ currentCard: cardData }));
 	},
