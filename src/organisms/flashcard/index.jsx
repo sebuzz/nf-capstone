@@ -12,12 +12,12 @@ const Flashcard = ({ ...props }) => {
 		<Div {...props}>
 			<Card sx={{ width: 445 }}>
 				<Paper elevation={20}>
-					<CardActionArea>
-						<Box sx={{ height: 550 }} alignItems="center">
-							<CardHeader {...props} />
+					<Box sx={{ height: 550 }} alignItems="center">
+						<CardHeader {...props} />
+						<CardActionArea sx={{ height: 410 }}>
 							<CardMainArea {...props} />
-						</Box>
-					</CardActionArea>
+						</CardActionArea>
+					</Box>
 					<CardFooter {...props} />
 				</Paper>
 			</Card>

@@ -29,6 +29,8 @@ const useStore = create(set => ({
 				return {
 					filteredData: kanjiFilter,
 				};
+			} else if (type === "translation") {
+				// do something
 			} else {
 				return {
 					filteredData: clone,
