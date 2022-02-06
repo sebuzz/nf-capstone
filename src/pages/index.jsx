@@ -25,7 +25,7 @@ const Page = () => {
 			setLessonData(lessonData);
 			setCurrentCard(randomCard);
 		};
-		callback();
+		void callback();
 	}, []);
 
 	return (
