@@ -4,22 +4,14 @@ import * as React from "react";
 import Stack from "@mui/material/Stack";
 import randomCardNumber from "../../ions/utils/randomCardNumber";
 
-const CardFooter = ({ ...props }) => {
-	//const setCurrentCard = useStore(state => state.setCurrentCard);
-	//const lessonData = useStore(state => state.lessonData);
-	const { lessonData, filteredData, filtered, setCurrentCard } = useStore(state => state);
-	//const filtered = useStore(state => state.filtered);
+const CardFooter = () => {
+	const setCurrentCard = useStore(state => state.setCurrentCard);
+	const filteredData = useStore(state => state.filteredData);
 
 	const nextCard = () => {
-		if (!filtered) {
-			const currentCardNo = lessonData[randomCardNumber(lessonData.length - 1)];
-			console.log("currentCardNo:", currentCardNo);
-			setCurrentCard(currentCardNo);
-		} else {
-			const currentCardNo = filteredData[randomCardNumber(filteredData.length - 1)];
-			console.log("currentCardNo:", currentCardNo);
-			setCurrentCard(currentCardNo);
-		}
+		const randomCard = filteredData[randomCardNumber(filteredData.length - 1)];
+		console.log("currentCardNo:", randomCard);
+		setCurrentCard(randomCard);
 	};
 	return (
 		<CardActions>

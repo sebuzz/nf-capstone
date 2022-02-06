@@ -10,14 +10,6 @@ const StyledDiv = styled.div`
 	background: #fae;
 	color: #000;
 	font-size: 1em;
-
-	&:hover {
-		background: #d8b;
-	}
-
-	&:active {
-		background: #bad;
-	}
 `;
 
 export default StyledDiv;

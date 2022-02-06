@@ -12,32 +12,39 @@ const useStore = create(set => ({
 	},
 	lessonData: [],
 	filteredData: [],
-	filtered: false,
-	toggleFiltered: () => {
+
+	showKana: true,
+	showTranslation: true,
+	toggleField: type => {
 		set(
 			produce(state => {
-				state.filtered = !state.filtered;
+				state[type] = !state[type];
+				if (type === "showKana") {
+					state.filteredData = state.showKana
+						? state.lessonData
+						: state.lessonData.filter(word => word.kanji.length > 0);
+				}
 			})
 		);
 	},
-	setFilter: type => {
-		set(state => {
-			const clone = [...state.lessonData];
-
-			if (type === "kanji") {
-				const kanjiFilter = clone.filter(word => word.kanji.length > 0);
-				return {
-					filteredData: kanjiFilter,
-				};
-			} else {
-				return {
-					filteredData: clone,
-				};
-			}
-		});
-	},
+	// MAYBE needed to filter
+	// setFilter: type => {
+	// 	set(state => {
+	// 		switch (type) {
+	// 			case "kanji":
+	// 				return {
+	// 					filteredData: state.lessonData.filter(word => word.kanji.length > 0),
+	// 				};
+	//
+	// 			default:
+	// 				return {
+	// 					filteredData: state.lessonData,
+	// 				};
+	// 		}
+	// 	});
+	// },
 	setLessonData: lessonData => {
-		set(() => ({ lessonData: lessonData }));
+		set(() => ({ lessonData, filteredData: lessonData }));
 		//console.log("lessonData:", lessonData);
 	},
 

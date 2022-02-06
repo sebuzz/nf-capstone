@@ -7,62 +7,39 @@ import randomCardNumber from "../ions/utils/randomCardNumber";
 import axios from "axios";
 
 const Page = () => {
-	const setCurrentCard = useStore(state => state.setCurrentCard);
 	const currentCard = useStore(state => state.currentCard);
-	const lessonData = useStore(state => state.lessonData);
-	const setFilter = useStore(state => state.setFilter);
-	const toggleFiltered = useStore(state => state.toggleFiltered);
-	const setLessonData = useStore(state => state.setLessonData);
 
 	// fetch lesson data once
-	useEffect(async () => {
-		console.log("attempting initial fetch lesson data");
-		const response = await axios.get("/vocabulary/japanese/9.json");
-		const result = response.data;
-		const lessonData = result.vocabulary;
-		setLessonData(lessonData);
-	}, []);
-
-	// Initialize Card on page load
 	useEffect(() => {
-		// TODO: test if filter is set and then maybe use filteredLesson
-		const currentCardNo = lessonData[randomCardNumber(lessonData.length - 1)];
-		console.log("cCN:", currentCardNo);
-		setCurrentCard(currentCardNo);
-		console.log("currentCard:", currentCard);
-	}, [lessonData]);
+		const callback = async () => {
+			const setLessonData = useStore.getState().setLessonData;
+			const setCurrentCard = useStore.getState().setCurrentCard;
+			console.log("attempting initial fetch lesson data");
+			const { data } = await axios.get("/vocabulary/japanese/9.json");
+
+			const lessonData = data.vocabulary;
+
+			// TODO: test if filter is set and then maybe use filteredLesson
+			const randomCard = lessonData[randomCardNumber(lessonData.length - 1)];
+			console.log("cCN:", randomCard);
+			setLessonData(lessonData);
+			setCurrentCard(randomCard);
+		};
+		callback();
+	}, []);
 
 	return (
 		<Layout>
-			<button
-				type="button"
-				onClick={() => {
-					toggleFiltered();
-					setFilter("kanji");
-					// console.log(filteredData);
-					// console.log("filtered:", filtered);
-				}}
-			>
-				Kanji
-			</button>
 			<Head>
 				<title key="title">KOTOBA</title>
 				<meta key="description" name="description" content="This is my capstone project" />
 			</Head>
-			{/*<h1>Home</h1>*/}
-			{/*{loading && <div>Loading...</div>}*/}
-			{/*{error && <div>{error.message}</div>}*/}
-			{/*{data && (*/}
-			{/*	<pre>*/}
-			{/*		<code>{JSON.stringify(data, null, 4)}</code>*/}
-			{/*	</pre>*/}
-			{/*)}*/}
+
 			<Flashcard
 				title={currentCard?.lesson}
 				word={currentCard?.word}
 				kanji={currentCard?.kanji}
 				meaning={currentCard?.meaning}
-				random={randomCardNumber(48)}
 			/>
 		</Layout>
 	);

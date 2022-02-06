@@ -3,10 +3,14 @@ import * as React from "react";
 import useStore from "../../ions/store/store";
 import VocabularyNoHolder from "../../atoms/vocabulary-no-holder";
 import FilteredHolder from "../../atoms/filtered-holder";
+import TranslationHolder from "../../atoms/translation-holder";
+import MenuDrawer from "../menu-drawer";
 
 const CardHeader = ({ ...props }) => {
-	//const currentCard = useStore(state => state.currentCard);
-	const { currentCard, filtered } = useStore(state => state);
+	const currentCard = useStore(state => state.currentCard);
+	const showKana = useStore(state => state.showKana);
+	const showTranslation = useStore(state => state.showTranslation);
+
 	return (
 		<>
 			<CardMedia
@@ -16,8 +20,13 @@ const CardHeader = ({ ...props }) => {
 				image="/images/flashcard.png"
 				alt={props.lesson}
 			/>
-			<VocabularyNoHolder>{currentCard?.vocabularyNo}</VocabularyNoHolder>
-			<FilteredHolder>{`filtered:${filtered}`}</FilteredHolder>
+
+			<div>
+				<VocabularyNoHolder>{currentCard?.vocabularyNo}</VocabularyNoHolder>
+				<FilteredHolder>{`Show Kana:${showKana}`}</FilteredHolder>
+				<TranslationHolder>{`Show Translation:${showTranslation}`}</TranslationHolder>
+			</div>
+			<MenuDrawer />
 		</>
 	);
 };
