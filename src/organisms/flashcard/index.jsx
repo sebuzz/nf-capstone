@@ -1,6 +1,6 @@
 import * as React from "react";
 import Card from "@mui/material/Card";
-import { CardActionArea, Paper } from "@mui/material";
+import { Paper } from "@mui/material";
 import Box from "@mui/material/Box";
 import Div from "../../atoms/div";
 import CardHeader from "../../molecules/card-header";
@@ -14,9 +14,9 @@ const Flashcard = ({ ...props }) => {
 				<Paper elevation={20}>
 					<Box sx={{ height: 550 }} alignItems="center">
 						<CardHeader {...props} />
-						<CardActionArea sx={{ height: 410 }}>
+						<Box sx={{ height: 410 }}>
 							<CardMainArea {...props} />
-						</CardActionArea>
+						</Box>
 					</Box>
 					<CardFooter {...props} />
 				</Paper>

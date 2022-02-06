@@ -6,18 +6,21 @@ import Stack from "@mui/material/Stack";
 import { Button } from "@mui/material";
 
 const MenuDrawer = () => {
-	const { toggleFiltered, setFilter } = useStore(store => store);
+	const showKana = useStore(store => store.showKana);
+	const showTranslation = useStore(store => store.showTranslation);
+	const toggleField = useStore(store => store.toggleField);
+
 	return (
 		<Paper>
 			<Stack direction="row">
 				<div>
 					<Button
+						sx={{ background: showKana ? "none" : "lightblue" }}
 						size="small"
 						variant="outlined"
 						color="secondary"
 						onClick={() => {
-							toggleFiltered();
-							setFilter("kanji");
+							toggleField("showKana");
 						}}
 					>
 						Hide Kana
@@ -25,12 +28,12 @@ const MenuDrawer = () => {
 				</div>
 				<div>
 					<Button
+						sx={{ background: showTranslation ? "none" : "lightblue" }}
 						size="small"
 						variant="outlined"
 						color="secondary"
 						onClick={() => {
-							toggleFiltered();
-							setFilter("translation");
+							toggleField("showTranslation");
 						}}
 					>
 						Hide Translation
