@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { pxToRem } from "../../ions/utils/unit";
 
-const StyledDiv = styled.div`
+export const StyledCardWrapper = styled.div`
 	display: flex;
 	justify-content: center;
 	padding: 0.5em 1em;
@@ -11,5 +11,3 @@ const StyledDiv = styled.div`
 	color: #000;
 	font-size: 1em;
 `;
-
-export default StyledDiv;

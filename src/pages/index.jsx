@@ -5,7 +5,9 @@ import Flashcard from "../organisms/flashcard";
 import useStore from "../ions/store/store";
 import randomCardNumber from "../ions/utils/randomCardNumber";
 import axios from "axios";
-
+const defaultProps = {
+	occurrence: 0,
+};
 const Page = () => {
 	const currentCard = useStore(state => state.currentCard);
 
@@ -17,7 +19,7 @@ const Page = () => {
 			console.log("attempting initial fetch lesson data");
 			const { data } = await axios.get("/vocabulary/japanese/9.json");
 
-			const lessonData = data.vocabulary;
+			const lessonData = data.vocabulary.map(item => ({ ...item, ...defaultProps }));
 
 			// TODO: test if filter is set and then maybe use filteredLesson
 			const randomCard = lessonData[randomCardNumber(lessonData.length - 1)];
@@ -36,7 +38,6 @@ const Page = () => {
 			</Head>
 
 			<Flashcard
-				title={currentCard?.lesson}
 				word={currentCard?.word}
 				kanji={currentCard?.kanji}
 				meaning={currentCard?.meaning}

@@ -10,6 +10,14 @@ const CardHeader = ({ ...props }) => {
 	const currentCard = useStore(state => state.currentCard);
 	const showKana = useStore(state => state.showKana);
 	const showTranslation = useStore(state => state.showTranslation);
+	const shownCards = useStore(state => state.shownCards);
+	//
+	const cardNumber = currentCard.vocabularyNo;
+	// console.log("cardNumber", cardNumber);
+	const thisCard = shownCards.find(element => element.cardNumber === cardNumber);
+	// console.log("thisCard", thisCard);
+	const timesShown = thisCard ? thisCard.occurrenceSC : 0;
+	// console.log("timesShown", timesShown);
 
 	return (
 		<>
@@ -22,7 +30,9 @@ const CardHeader = ({ ...props }) => {
 			/>
 
 			<div>
-				<VocabularyNoHolder>{currentCard?.vocabularyNo}</VocabularyNoHolder>
+				<VocabularyNoHolder>
+					{cardNumber}, {timesShown}
+				</VocabularyNoHolder>
 				<FilteredHolder>{`Show Kana:${showKana}`}</FilteredHolder>
 				<TranslationHolder>{`Show Translation:${showTranslation}`}</TranslationHolder>
 			</div>

@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import useStore from "../../ions/store/store";
 
-const CardMainArea = ({ ...props }) => {
+const CardMainArea = ({ kanji, word, meaning }) => {
 	const showKana = useStore(store => store.showKana);
 	const showTranslation = useStore(store => store.showTranslation);
 
@@ -12,16 +12,16 @@ const CardMainArea = ({ ...props }) => {
 		<Stack justifyContent="center" alignItems="center" spacing={2}>
 			<CardContent>
 				<Typography gutterBottom align="center" variant="h2" component="div">
-					{props.kanji}
+					{kanji}
 				</Typography>
 				{showKana && (
 					<Typography align="center" variant="h4" component="div">
-						{props.word}
+						{word}
 					</Typography>
 				)}
 				{showTranslation && (
 					<Typography align="center" variant="body2" color="text.secondary">
-						{props.meaning}
+						{meaning}
 					</Typography>
 				)}
 			</CardContent>
