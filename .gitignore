@@ -46,3 +46,12 @@ cypress/cucumber-json
 src/pages/api/wordgrammar.js
 src/pages/wordgrammar.js
 
+# DB
+.env
+
+public/vocabulary
+public/vocabulary.zip
+!public/vocabulary/9.json
+
+src/database
+
