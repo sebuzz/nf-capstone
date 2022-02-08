@@ -56,11 +56,40 @@ const useStore = create(set => ({
 		lesson: 1,
 		word: "",
 		vocabularyNo: 1,
+		occurrence: 1,
 	},
 	// set the current card data to the incoming data
 	setCurrentCard: cardData => {
 		console.log("setting currentCard", cardData);
-		set(() => ({ currentCard: cardData }));
+
+		set(
+			produce(state => {
+				state.currentCard = cardData;
+			})
+		);
+	},
+	shownCards: [],
+	setShownCards: card => {
+		set(
+			produce(state => {
+				if (state.shownCards.find(element => element.cardNumber === card)) {
+					//console.log("multiple found!!!");
+					const multiple = state.shownCards.find(element => element.cardNumber === card);
+					multiple.occurrenceSC += 1;
+					//console.log("double.occurrence:", multiple.occurrenceSC);
+					state.currentCard.occurrence = multiple.occurrenceSC;
+				} else {
+					console.log("added new card number");
+					const newCardNumber = {
+						cardNumber: card,
+						occurrenceSC: 1,
+					};
+					state.shownCards.push(newCardNumber);
+					console.log("card:", card);
+				}
+				console.log("=>", JSON.stringify(state.shownCards));
+			})
+		);
 	},
 }));
 

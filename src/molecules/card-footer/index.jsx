@@ -7,11 +7,14 @@ import randomCardNumber from "../../ions/utils/randomCardNumber";
 const CardFooter = () => {
 	const setCurrentCard = useStore(state => state.setCurrentCard);
 	const filteredData = useStore(state => state.filteredData);
+	const setShownCards = useStore(state => state.setShownCards);
 
 	const nextCard = () => {
 		const randomCard = filteredData[randomCardNumber(filteredData.length - 1)];
-		console.log("currentCardNo:", randomCard);
-		setCurrentCard(randomCard);
+		// console.log("currentCardNo:", randomCard);
+		setShownCards(randomCard.vocabularyNo);
+		// console.log("=====>", randomCard);
+		setCurrentCard(randomCard); // randomCard
 	};
 	return (
 		<CardActions>
@@ -23,6 +26,7 @@ const CardFooter = () => {
 				spacing={2}
 			>
 				<Button
+					variant="outlined"
 					size="small"
 					color="primary"
 					onClick={() => {
@@ -33,6 +37,7 @@ const CardFooter = () => {
 				</Button>
 
 				<Button
+					disabled
 					size="small"
 					color="primary"
 					onClick={() => {
@@ -42,6 +47,7 @@ const CardFooter = () => {
 					Correct
 				</Button>
 				<Button
+					disabled
 					size="small"
 					color="primary"
 					onClick={() => {
@@ -52,6 +58,7 @@ const CardFooter = () => {
 				</Button>
 
 				<Button
+					disabled
 					size="small"
 					color="primary"
 					onClick={() => {
