@@ -46,3 +46,13 @@ cypress/cucumber-json
 src/pages/api/wordgrammar.js
 src/pages/wordgrammar.js
 
+# MongoDB
+.env
+
+# Vocabulary
+public/vocabulary/japanese
+public/vocabulary/japanese.zip
+!public/vocabulary/japanese.9.json
+
+src/database
+
