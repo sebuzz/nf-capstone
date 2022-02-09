@@ -19,7 +19,7 @@ const ChaptersCard = () => {
 	const router = useRouter();
 	const setMyChapter = item => {
 		setSelectedLesson(item);
-		router.push("../");
+		router.push("/");
 	};
 	return (
 		<CardWrapper>
