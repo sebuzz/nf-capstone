@@ -50,9 +50,7 @@ src/pages/wordgrammar.js
 .env
 
 # Vocabulary
-public/vocabulary/japanese
 public/vocabulary/japanese.zip
-!public/vocabulary/japanese.9.json
 
 src/database
 
