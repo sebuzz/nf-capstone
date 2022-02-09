@@ -1,0 +1,530 @@
+{
+  "lesson": 32,
+  "vocabulary": [
+    {
+      "id": "fa3dfaeb-b8d8-4713-8aff-26737ec1beec",
+      "lesson": 32,
+      "no": "1",
+      "word": ["うんどうします"],
+      "kanji": ["運動します"],
+      "meaning": ["take exercise"],
+      "vocabularyNo": 1326
+    },
+    {
+      "id": "771effb9-be0a-4e31-8174-bafc4f8055b3",
+      "lesson": 32,
+      "no": "2",
+      "word": ["せいこうします"],
+      "kanji": ["成功します"],
+      "meaning": ["succeed"],
+      "vocabularyNo": 1327
+    },
+    {
+      "id": "ece802fc-710f-45ae-b22f-9095dc5ebf58",
+      "lesson": 32,
+      "no": "3",
+      "word": ["しっぱいします[しけんに～]"],
+      "kanji": ["失敗します[試験に～]"],
+      "meaning": ["fail (an examination)"],
+      "vocabularyNo": 1328
+    },
+    {
+      "id": "39883036-038f-4da9-8499-3dd909ad6ec6",
+      "lesson": 32,
+      "no": "4",
+      "word": ["ごうかくします[しけんに～]"],
+      "kanji": ["合格します[試験に～]"],
+      "meaning": ["pass (an examination)"],
+      "vocabularyNo": 1329
+    },
+    {
+      "id": "d74033c4-f227-40d9-8761-a910e1e9d8d0",
+      "lesson": 32,
+      "no": "5",
+      "word": ["もどります"],
+      "kanji": ["戻ります"],
+      "meaning": ["return"],
+      "vocabularyNo": 1330
+    },
+    {
+      "id": "e19e12b1-57e2-42e8-815a-74c0a4ddc497",
+      "lesson": 32,
+      "no": "6",
+      "word": ["やみます[あめが～]"],
+      "kanji": ["[雨が～]"],
+      "meaning": ["(rain) stop"],
+      "vocabularyNo": 1331
+    },
+    {
+      "id": "19efeb48-8789-4bde-a40a-5043d6166865",
+      "lesson": 32,
+      "no": "7",
+      "word": ["はれます"],
+      "kanji": ["晴れます"],
+      "meaning": ["clear up"],
+      "vocabularyNo": 1332
+    },
+    {
+      "id": "da71bfd2-c498-40ad-a468-2b4633f56f36",
+      "lesson": 32,
+      "no": "8",
+      "word": ["くもります"],
+      "kanji": ["曇ります"],
+      "meaning": ["get cloudy"],
+      "vocabularyNo": 1333
+    },
+    {
+      "id": "0b4a84fa-fa9b-4bf8-857b-18ab0abe5031",
+      "lesson": 32,
+      "no": "9",
+      "word": ["ふきます[かぜが～]"],
+      "kanji": ["吹きます[風が～]"],
+      "meaning": ["(wind) blow"],
+      "vocabularyNo": 1334
+    },
+    {
+      "id": "82428bd1-ae61-484a-87c7-7d31c150f7a7",
+      "lesson": 32,
+      "no": "10",
+      "word": ["なおります", "[びょうきが～]", "[こしょうが～]"],
+      "kanji": ["治ります、直ります[病気が～]", "[故障が～]"],
+      "meaning": ["recover from (sickness)", "get well", "be fixed", "be repaired"],
+      "vocabularyNo": 1335
+    },
+    {
+      "id": "c37d45bc-fbdf-45fa-a3ca-d6309d612528",
+      "lesson": 32,
+      "no": "11",
+      "word": ["つづきます[ねつが～]"],
+      "kanji": ["続きます[熱が～]"],
+      "meaning": ["(high temperature) continue"],
+      "vocabularyNo": 1336
+    },
+    {
+      "id": "afc58902-78ea-490d-98a7-3f10604a7ed8",
+      "lesson": 32,
+      "no": "12",
+      "word": ["ひきます[かぜを]"],
+      "kanji": [],
+      "meaning": ["catch (a cold)"],
+      "vocabularyNo": 1337
+    },
+    {
+      "id": "e782ab30-2258-49d5-9c75-fd1007b29d8c",
+      "lesson": 32,
+      "no": "13",
+      "word": ["ひやします"],
+      "kanji": ["冷やします"],
+      "meaning": ["cool"],
+      "vocabularyNo": 1338
+    },
+    {
+      "id": "0dfe7d27-295a-430b-bac7-79a657e2afd2",
+      "lesson": 32,
+      "no": "14",
+      "word": ["しんぱい[な]"],
+      "kanji": ["心配[な]"],
+      "meaning": ["worried", "anxious"],
+      "vocabularyNo": 1339
+    },
+    {
+      "id": "fbee66d1-7db3-43ba-a50f-47878fe7b808",
+      "lesson": 32,
+      "no": "15",
+      "word": ["じゅうぶん[な]"],
+      "kanji": ["十分[な]"],
+      "meaning": ["enough", "sufficient"],
+      "vocabularyNo": 1340
+    },
+    {
+      "id": "43c0721b-71fe-43eb-8e64-2da1065a70da",
+      "lesson": 32,
+      "no": "16",
+      "word": ["おかしい"],
+      "kanji": [],
+      "meaning": ["strange", "funny"],
+      "vocabularyNo": 1341
+    },
+    {
+      "id": "59aadc90-49b5-4c81-81cd-ce14ea955a19",
+      "lesson": 32,
+      "no": "17",
+      "word": ["うるさい"],
+      "kanji": [],
+      "meaning": ["noisy"],
+      "vocabularyNo": 1342
+    },
+    {
+      "id": "0c927c07-f598-4272-a980-7ec448af70bb",
+      "lesson": 32,
+      "no": "18",
+      "word": ["やけど[～をします]"],
+      "kanji": [],
+      "meaning": ["burning (get burned)"],
+      "vocabularyNo": 1343
+    },
+    {
+      "id": "a7b6da3c-cdbe-41d8-9030-e8e0aab3c4b3",
+      "lesson": 32,
+      "no": "19",
+      "word": ["けが[～をします]"],
+      "kanji": [],
+      "meaning": ["injury (get injured)"],
+      "vocabularyNo": 1344
+    },
+    {
+      "id": "68f11fd1-02fc-41b8-bc78-9b737b77f59f",
+      "lesson": 32,
+      "no": "20",
+      "word": ["せき[～がでます]"],
+      "kanji": [],
+      "meaning": ["cough (get a cough)"],
+      "vocabularyNo": 1345
+    },
+    {
+      "id": "1f2cfd3d-c254-4358-a94a-e2dcc9530b48",
+      "lesson": 32,
+      "no": "21",
+      "word": ["インフルエンザ"],
+      "kanji": [],
+      "meaning": ["influenza"],
+      "vocabularyNo": 1346
+    },
+    {
+      "id": "6f082834-4c58-4db9-9fb1-9d423b3b3d9b",
+      "lesson": 32,
+      "no": "22",
+      "word": ["そら"],
+      "kanji": ["空"],
+      "meaning": ["sky"],
+      "vocabularyNo": 1347
+    },
+    {
+      "id": "c267973e-916f-4355-bea6-bbf2be5209c3",
+      "lesson": 32,
+      "no": "23",
+      "word": ["たいよう"],
+      "kanji": ["太陽"],
+      "meaning": ["sun"],
+      "vocabularyNo": 1348
+    },
+    {
+      "id": "a5a1eb40-d92b-4ab3-942b-b6b5ed670731",
+      "lesson": 32,
+      "no": "24",
+      "word": ["ほし"],
+      "kanji": ["星"],
+      "meaning": ["star"],
+      "vocabularyNo": 1349
+    },
+    {
+      "id": "c0bb39ad-52a5-45d1-b016-a0b2f031c8b4",
+      "lesson": 32,
+      "no": "25",
+      "word": ["つき"],
+      "kanji": ["月"],
+      "meaning": ["moon"],
+      "vocabularyNo": 1350
+    },
+    {
+      "id": "99d19610-0f74-4efa-a0d5-bc0fa65e57a8",
+      "lesson": 32,
+      "no": "26",
+      "word": ["かぜ"],
+      "kanji": ["風"],
+      "meaning": ["wind"],
+      "vocabularyNo": 1351
+    },
+    {
+      "id": "c71bea99-8178-4399-b2e6-924856c04a0c",
+      "lesson": 32,
+      "no": "27",
+      "word": ["きた"],
+      "kanji": ["北"],
+      "meaning": ["north"],
+      "vocabularyNo": 1352
+    },
+    {
+      "id": "3e1ee8f9-e36f-4eed-a984-dc8fd8193daa",
+      "lesson": 32,
+      "no": "28",
+      "word": ["みなみ"],
+      "kanji": ["南"],
+      "meaning": ["south"],
+      "vocabularyNo": 1353
+    },
+    {
+      "id": "5d09226b-ec36-42f8-be53-7e738c0c49e7",
+      "lesson": 32,
+      "no": "29",
+      "word": ["にし"],
+      "kanji": ["西"],
+      "meaning": ["west"],
+      "vocabularyNo": 1354
+    },
+    {
+      "id": "024522e3-8b90-47e1-a2ca-e2bac49c524d",
+      "lesson": 32,
+      "no": "30",
+      "word": ["ひがし"],
+      "kanji": ["東"],
+      "meaning": ["east"],
+      "vocabularyNo": 1355
+    },
+    {
+      "id": "0b21b818-8103-45eb-92e3-16672f10e62a",
+      "lesson": 32,
+      "no": "31",
+      "word": ["すいどう"],
+      "kanji": ["水道"],
+      "meaning": ["faucet", "tap", "water supply"],
+      "vocabularyNo": 1356
+    },
+    {
+      "id": "9892f86c-d7d9-4f17-afa8-4222f626d173",
+      "lesson": 32,
+      "no": "32",
+      "word": ["エンジン"],
+      "kanji": [],
+      "meaning": ["engine"],
+      "vocabularyNo": 1357
+    },
+    {
+      "id": "29b8c379-12d6-4dfc-99b9-0edc947c73b1",
+      "lesson": 32,
+      "no": "33",
+      "word": ["チーム"],
+      "kanji": [],
+      "meaning": ["team"],
+      "vocabularyNo": 1358
+    },
+    {
+      "id": "3fe776ce-3b0d-4698-91e0-61c505c2a249",
+      "lesson": 32,
+      "no": "34",
+      "word": ["こんや"],
+      "kanji": ["今夜"],
+      "meaning": ["this evening"],
+      "vocabularyNo": 1359
+    },
+    {
+      "id": "eb02aa8c-4fae-4863-8792-e37164281903",
+      "lesson": 32,
+      "no": "35",
+      "word": ["ゆうがた"],
+      "kanji": ["夕方"],
+      "meaning": ["late afternoon"],
+      "vocabularyNo": 1360
+    },
+    {
+      "id": "58bea08e-324e-4509-9a79-7ad51d5cbbd4",
+      "lesson": 32,
+      "no": "36",
+      "word": ["まえ"],
+      "kanji": [],
+      "meaning": ["a time in the past", "before"],
+      "vocabularyNo": 1361
+    },
+    {
+      "id": "d5e5953a-0fc8-426c-a46b-164ff2a8ef81",
+      "lesson": 32,
+      "no": "37",
+      "word": ["おそく"],
+      "kanji": ["遅く"],
+      "meaning": ["(late) time"],
+      "vocabularyNo": 1362
+    },
+    {
+      "id": "d123a57d-e779-43f0-a06e-d1d61468ce22",
+      "lesson": 32,
+      "no": "38",
+      "word": ["こんなに"],
+      "kanji": [],
+      "meaning": ["like this"],
+      "vocabularyNo": 1363
+    },
+    {
+      "id": "d4bc43f7-3a7d-40b5-b902-00fa67129359",
+      "lesson": 32,
+      "no": "39",
+      "word": ["そんなに"],
+      "kanji": [],
+      "meaning": ["like that (concerning a matter related to the listener)"],
+      "vocabularyNo": 1364
+    },
+    {
+      "id": "f19dcf09-2853-4ffd-ab76-0691fa3c411f",
+      "lesson": 32,
+      "no": "40",
+      "word": ["あんなに"],
+      "kanji": [],
+      "meaning": [
+        "like that (concerning a matter not related to the speaker or the listener)",
+        "that much"
+      ],
+      "vocabularyNo": 1365
+    },
+    {
+      "id": "e808787e-241f-4d9e-b29d-9306ffb2d903",
+      "lesson": 32,
+      "no": "41",
+      "word": ["もしかしたら"],
+      "kanji": [],
+      "meaning": ["possibly", "perhaps"],
+      "vocabularyNo": 1366
+    },
+    {
+      "id": "51e0911c-9fec-4eb4-8013-fa9b27dea1b8",
+      "lesson": 32,
+      "no": "42",
+      "word": ["それはいけませんね"],
+      "kanji": [],
+      "meaning": ["that’s too bad"],
+      "vocabularyNo": 1367
+    },
+    {
+      "id": "531cefc4-446f-43ce-b37e-18815269c10d",
+      "lesson": 32,
+      "no": "43",
+      "word": ["オリンピック"],
+      "kanji": [],
+      "meaning": ["olympic games"],
+      "vocabularyNo": 1368
+    },
+    {
+      "id": "03320480-f126-4db2-9256-e521e7b83726",
+      "lesson": 32,
+      "no": "44",
+      "word": ["げんき"],
+      "kanji": ["元気"],
+      "meaning": ["vigor"],
+      "vocabularyNo": 1369
+    },
+    {
+      "id": "f1a2c98b-29df-4fe7-b4db-0c3ea87ffd07",
+      "lesson": 32,
+      "no": "45",
+      "word": ["い"],
+      "kanji": ["胃"],
+      "meaning": ["stomach"],
+      "vocabularyNo": 1370
+    },
+    {
+      "id": "82616126-b2ea-400a-9b6a-332dbb304226",
+      "lesson": 32,
+      "no": "46",
+      "word": ["はたらきすぎ"],
+      "kanji": ["働きすぎ"],
+      "meaning": ["working too much"],
+      "vocabularyNo": 1371
+    },
+    {
+      "id": "97f1d1f1-37b6-49a4-a524-f957da2f7356",
+      "lesson": 32,
+      "no": "47",
+      "word": ["ストレス"],
+      "kanji": [],
+      "meaning": ["stress"],
+      "vocabularyNo": 1372
+    },
+    {
+      "id": "b0a5bcf6-4134-4d7f-9e15-eb390ebce760",
+      "lesson": 32,
+      "no": "48",
+      "word": ["むりをします"],
+      "kanji": ["無理をします"],
+      "meaning": ["work more than one’s capacity"],
+      "vocabularyNo": 1373
+    },
+    {
+      "id": "78fa8f35-134b-4c13-a060-2f4b620a1c26",
+      "lesson": 32,
+      "no": "49",
+      "word": ["ゆっくりします"],
+      "kanji": [],
+      "meaning": ["take one’s time"],
+      "vocabularyNo": 1374
+    },
+    {
+      "id": "fe457258-0b64-4316-a0d8-ecf17efc7bcd",
+      "lesson": 32,
+      "no": "50",
+      "word": ["ほしうらない"],
+      "kanji": ["星占い"],
+      "meaning": ["horoscope"],
+      "vocabularyNo": 1375
+    },
+    {
+      "id": "748b6e19-3258-4982-9701-1893f72e2816",
+      "lesson": 32,
+      "no": "51",
+      "word": ["おうしざ"],
+      "kanji": ["牡牛座"],
+      "meaning": ["taurus"],
+      "vocabularyNo": 1376
+    },
+    {
+      "id": "1bceed7c-dfd3-4761-bb3d-cc47292073bc",
+      "lesson": 32,
+      "no": "52",
+      "word": ["こまります"],
+      "kanji": ["困ります"],
+      "meaning": ["be in trouble", "have a problem"],
+      "vocabularyNo": 1377
+    },
+    {
+      "id": "9f142895-8d36-4606-9f1a-d60c3df4cd26",
+      "lesson": 32,
+      "no": "53",
+      "word": ["たからくじ"],
+      "kanji": ["宝くじ"],
+      "meaning": ["lottery"],
+      "vocabularyNo": 1378
+    },
+    {
+      "id": "9112b619-f1b7-4599-97f1-7f87cc5e1194",
+      "lesson": 32,
+      "no": "54",
+      "word": ["あたります[たからくじが～]"],
+      "kanji": ["当たります[宝くじが～]"],
+      "meaning": ["win (a lottery)"],
+      "vocabularyNo": 1379
+    },
+    {
+      "id": "049db67b-f39e-4b6a-8405-4a730bf0b317",
+      "lesson": 32,
+      "no": "55",
+      "word": ["けんこう"],
+      "kanji": ["健康"],
+      "meaning": ["health"],
+      "vocabularyNo": 1380
+    },
+    {
+      "id": "bfd15ae7-103a-4e86-a0a8-de695bd4000e",
+      "lesson": 32,
+      "no": "56",
+      "word": ["れんあい"],
+      "kanji": ["恋愛"],
+      "meaning": ["romantic love"],
+      "vocabularyNo": 1381
+    },
+    {
+      "id": "e01ba804-3180-4d73-ba6f-dd7a5aa31ca1",
+      "lesson": 32,
+      "no": "57",
+      "word": ["こいびと"],
+      "kanji": ["恋人"],
+      "meaning": ["sweetheart", "boyfriend", "girlfriend"],
+      "vocabularyNo": 1382
+    },
+    {
+      "id": "f6e27a1c-fab8-4cc6-afc8-421a2a246703",
+      "lesson": 32,
+      "no": "58",
+      "word": ["[お]かねもち"],
+      "kanji": ["[お]金持ち"],
+      "meaning": ["rich person"],
+      "vocabularyNo": 1383
+    }
+  ]
+}
