@@ -51,6 +51,6 @@ src/pages/wordgrammar.js
 
 # Vocabulary
 public/vocabulary/japanese.zip
-
+public/vocabulary/japanese/lessons.json
 src/database
 
