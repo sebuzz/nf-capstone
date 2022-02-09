@@ -12,11 +12,7 @@ const useStore = create(set => ({
 	},
 	selectedLesson: 1,
 	setSelectedLesson: number => {
-		set(
-			produce(state => {
-				state.selectedLesson = number;
-			})
-		);
+		set(() => ({ selectedLesson: number }));
 	},
 	lessonData: [],
 	filteredData: [],
