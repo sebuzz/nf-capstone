@@ -10,6 +10,14 @@ const useStore = create(set => ({
 			})
 		);
 	},
+	selectedLesson: 1,
+	setSelectedLesson: number => {
+		set(
+			produce(state => {
+				state.selectedLesson = number;
+			})
+		);
+	},
 	lessonData: [],
 	filteredData: [],
 

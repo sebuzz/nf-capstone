@@ -16,8 +16,9 @@ const Page = () => {
 		const callback = async () => {
 			const setLessonData = useStore.getState().setLessonData;
 			const setCurrentCard = useStore.getState().setCurrentCard;
+			const selectedLesson = useStore.getState().selectedLesson;
 			console.log("attempting initial fetch lesson data");
-			const { data } = await axios.get("/vocabulary/japanese/9.json");
+			const { data } = await axios.get(`/vocabulary/japanese/${selectedLesson}.json`);
 
 			const lessonData = data.vocabulary.map(item => ({ ...item, ...defaultProps }));
 
