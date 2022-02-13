@@ -7,7 +7,7 @@ import CardHeader from "../../molecules/card-header";
 import CardMainArea from "../../molecules/card-main-area";
 import CardFooter from "../../molecules/card-footer";
 
-const Flashcard = ({ word, kanji, meaning, ...props }) => {
+const Flashcard = ({ ...props }) => {
 	return (
 		<CardWrapper>
 			<Card sx={{ width: 445 }}>
@@ -15,7 +15,7 @@ const Flashcard = ({ word, kanji, meaning, ...props }) => {
 					<Box sx={{ height: 550 }} alignItems="center">
 						<CardHeader {...props} />
 						<Box sx={{ height: 410 }}>
-							<CardMainArea word={word} kanji={kanji} meaning={meaning} />
+							<CardMainArea />
 						</Box>
 					</Box>
 					<CardFooter />

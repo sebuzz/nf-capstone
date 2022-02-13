@@ -5,6 +5,10 @@ import { persist } from "zustand/middleware";
 const useStore = create(
 	persist(
 		set => ({
+			flipped: false,
+			setFlipped(flipped) {
+				set({ flipped });
+			},
 			fetched: false,
 			setFetched: () => {
 				set(
