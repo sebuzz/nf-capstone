@@ -10,7 +10,6 @@ const defaultProps = {
 };
 const Page = () => {
 	const currentCard = useStore(state => state.currentCard);
-
 	// fetch lesson data once
 	useEffect(() => {
 		const callback = async () => {
@@ -34,15 +33,11 @@ const Page = () => {
 	return (
 		<Layout>
 			<Head>
-				<title key="title">KOTOBA</title>
+				<title key="title">KOTOBA - lesson {currentCard.lesson}</title>
 				<meta key="description" name="description" content="This is my capstone project" />
 			</Head>
 
-			<Flashcard
-				word={currentCard?.word}
-				kanji={currentCard?.kanji}
-				meaning={currentCard?.meaning}
-			/>
+			<Flashcard />
 		</Layout>
 	);
 };
