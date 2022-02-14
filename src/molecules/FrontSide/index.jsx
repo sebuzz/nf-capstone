@@ -5,10 +5,11 @@ import * as React from "react";
 import useStore from "../../ions/store/store";
 import { StyledCardMainArea } from "./styled";
 
-const CardMainArea = () => {
+const FrontSide = () => {
 	const currentCard = useStore(state => state.currentCard);
 	const showKana = useStore(store => store.showKana);
 	const showTranslation = useStore(store => store.showTranslation);
+	const learnMode = useStore(state => state.learnMode);
 
 	return (
 		<StyledCardMainArea>
@@ -22,7 +23,7 @@ const CardMainArea = () => {
 							{currentCard.word}
 						</Typography>
 					)}
-					{showTranslation && (
+					{learnMode && showTranslation && (
 						<Typography align="center" variant="body2" color="text.secondary">
 							{currentCard.meaning}
 						</Typography>
@@ -33,4 +34,4 @@ const CardMainArea = () => {
 	);
 };
 
-export default CardMainArea;
+export default FrontSide;

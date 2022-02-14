@@ -5,6 +5,18 @@ import { persist } from "zustand/middleware";
 const useStore = create(
 	persist(
 		set => ({
+			debugMode: false,
+			flipped: false,
+			setFlipped(flipped) {
+				set({ flipped });
+			},
+			learnMode: false,
+			setLearnMode: bool => {
+				// setting learnMode to TRUE will show option to hide translation
+				// and at the same time will deactivate the Flip Card function.
+				// If Card is currently flipped, it will turn to front side
+				set(state => ({ learnMode: bool, flipped: bool ? false : state.flipped }));
+			},
 			fetched: false,
 			setFetched: () => {
 				set(

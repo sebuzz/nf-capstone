@@ -8,6 +8,9 @@ const CardFooter = () => {
 	const setCurrentCard = useStore(state => state.setCurrentCard);
 	const filteredData = useStore(state => state.filteredData);
 	const setShownCards = useStore(state => state.setShownCards);
+	const flipped = useStore(state => state.flipped);
+	const setFlipped = useStore(state => state.setFlipped);
+	const learnMode = useStore(store => store.learnMode);
 
 	const nextCard = () => {
 		const randomCard = filteredData[randomCardNumber(filteredData.length - 1)];
@@ -37,7 +40,7 @@ const CardFooter = () => {
 				</Button>
 
 				<Button
-					disabled
+					disabled={learnMode}
 					size="small"
 					color="primary"
 					onClick={() => {
@@ -47,7 +50,7 @@ const CardFooter = () => {
 					Correct
 				</Button>
 				<Button
-					disabled
+					disabled={learnMode}
 					size="small"
 					color="primary"
 					onClick={() => {
@@ -58,10 +61,11 @@ const CardFooter = () => {
 				</Button>
 
 				<Button
-					disabled
+					disabled={learnMode}
 					size="small"
 					color="primary"
 					onClick={() => {
+						setFlipped(!flipped);
 						console.log("FLIP CARD");
 					}}
 				>
