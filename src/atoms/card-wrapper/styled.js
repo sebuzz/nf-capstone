@@ -7,7 +7,7 @@ export const StyledCardWrapper = styled.div`
 	padding: 0.5em 1em;
 	border: 1px solid rgba(0, 0, 0, 0.3);
 	border-radius: ${pxToRem(4)};
-	background: url("/images/pattern_blue_2.png");
+	background: url("/images/pattern_sepia_small.png");
 	color: #000;
 	font-size: 1em;
 `;
