@@ -14,7 +14,7 @@ const Flashcard = () => {
 	return (
 		<CardWrapper>
 			<Card sx={{ width: 445 }}>
-				<Box sx={{ height: 550 }} alignItems="center">
+				<Box sx={{ height: 550, backgroundColor: "#eee" }} alignItems="center">
 					<CardHeader />
 					<Box sx={{ height: 410 }}>
 						<FlipCard
