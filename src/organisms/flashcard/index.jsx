@@ -3,7 +3,6 @@ import Card from "@mui/material/Card";
 import Box from "@mui/material/Box";
 import CardWrapper from "../../atoms/card-wrapper";
 import CardHeader from "../../molecules/card-header";
-//import CardMainArea from "../../molecules/card-main-area";
 import CardFooter from "../../molecules/card-footer";
 import useStore from "../../ions/store/store";
 import FlipCard from "../flip-card";
@@ -18,7 +17,6 @@ const Flashcard = () => {
 				<Box sx={{ height: 550 }} alignItems="center">
 					<CardHeader />
 					<Box sx={{ height: 410 }}>
-						{/*<CardMainArea />*/}
 						<FlipCard
 							flipped={flipped}
 							childrenFront={<FrontSide />}

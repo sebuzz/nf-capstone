@@ -4,15 +4,12 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import useStore from "../../ions/store/store";
 import { StyledCardMainArea } from "./styled";
-import CardActions from "@mui/material/CardActions";
-import IconButton from "@mui/material/IconButton";
-import FlipIcon from "@mui/icons-material/Flip";
 
 const FrontSide = () => {
 	const currentCard = useStore(state => state.currentCard);
 	const showKana = useStore(store => store.showKana);
-	//const showTranslation = useStore(store => store.showTranslation);
-	const setFlipped = useStore(state => state.setFlipped);
+	const showTranslation = useStore(store => store.showTranslation);
+	const learnMode = useStore(state => state.learnMode);
 
 	return (
 		<StyledCardMainArea>
@@ -26,21 +23,12 @@ const FrontSide = () => {
 							{currentCard.word}
 						</Typography>
 					)}
-					{/*{showTranslation && (*/}
-					{/*	<Typography align="center" variant="body2" color="text.secondary">*/}
-					{/*		{currentCard.meaning}*/}
-					{/*	</Typography>*/}
-					{/*)}*/}
+					{learnMode && showTranslation && (
+						<Typography align="center" variant="body2" color="text.secondary">
+							{currentCard.meaning}
+						</Typography>
+					)}
 				</CardContent>
-				<CardActions>
-					<IconButton
-						onClick={() => {
-							setFlipped(true);
-						}}
-					>
-						<FlipIcon />
-					</IconButton>
-				</CardActions>
 			</Stack>
 		</StyledCardMainArea>
 	);

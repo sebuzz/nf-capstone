@@ -16,14 +16,13 @@ const Page = () => {
 			const setLessonData = useStore.getState().setLessonData;
 			const setCurrentCard = useStore.getState().setCurrentCard;
 			const selectedLesson = useStore.getState().selectedLesson;
-			console.log("attempting initial fetch lesson data");
+			//console.log("attempting initial fetch lesson data");
 			const { data } = await axios.get(`/vocabulary/japanese/${selectedLesson}.json`);
 
 			const lessonData = data.vocabulary.map(item => ({ ...item, ...defaultProps }));
 
 			// TODO: test if filter is set and then maybe use filteredLesson
 			const randomCard = lessonData[randomCardNumber(lessonData.length - 1)];
-			console.log("cCN:", randomCard);
 			setLessonData(lessonData);
 			setCurrentCard(randomCard);
 		};

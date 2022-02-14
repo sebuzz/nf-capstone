@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 export const StyledFlipCard = styled.div`
 	position: relative;
-	max-width: 300px;
+	max-width: 450px;
 	margin: auto;
 	transform-style: preserve-3d;
 	perspective: 700px;
@@ -13,7 +13,7 @@ export const innerStyle = {
 	display: "flex",
 	flexDirection: "column",
 	backfaceVisibility: "hidden",
-	transition: "transform 0.2s linear",
+	transition: "transform 0.5s cubic-bezier(0.1, -0.3, 0.2, -0.3)",
 	transformStyle: "preserve-3d",
 };
 
