@@ -15,10 +15,13 @@ const FrontSide = () => {
 	const learnMode = useStore(state => state.learnMode);
 
 	const speakIt = textToSpeak => {
-		let voices = speechSynthesis.getVoices();
-		let utterance = new SpeechSynthesisUtterance(textToSpeak);
-		utterance.voice = voices[58]; // 18 58
-		utterance.lang = "ja-JP";
+		const voices = speechSynthesis.getVoices();
+		const utterance = new SpeechSynthesisUtterance(textToSpeak);
+		//utterance.voice = voices[21]; // 18 58 // 21 // 58 works best for macOS Chrome, 21 for iOS
+		utterance.voice = voices.find(element => element.lang === "ja-JP");
+		utterance.volume = 10;
+		utterance.pitch = 1;
+		utterance.rate = 1;
 		speechSynthesis.speak(utterance);
 	};
 
