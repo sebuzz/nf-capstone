@@ -29,9 +29,9 @@ const FrontSide = () => {
 		<StyledCardMainArea>
 			<Stack justifyContent="center" alignItems="center" spacing={2}>
 				<CardContent>
-					<Typography gutterBottom align="center" variant="h2" component="div">
+					<Typography gutterBottom align="center" variant="h4" component="div">
 						<Link
-							color="#616161"
+							color="#212121"
 							underline="none"
 							unselectable="on"
 							onClick={() => {
@@ -42,7 +42,7 @@ const FrontSide = () => {
 						</Link>
 					</Typography>
 					{showKana && (
-						<Typography align="center" variant="h4" component="div">
+						<Typography align="center" variant="h5" component="div">
 							<Link
 								color="#616161"
 								underline="none"
