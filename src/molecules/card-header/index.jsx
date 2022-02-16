@@ -19,14 +19,7 @@ const CardHeader = () => {
 
 	return (
 		<>
-			{/*<CardMedia*/}
-			{/*	sx={{ marginY: 0 }}*/}
-			{/*	component="img"*/}
-			{/*	height="auto"*/}
-			{/*	image="/images/flashcard.png"*/}
-			{/*	alt={props.lesson}*/}
-			{/*/>*/}
-			<Image src="/images/flashcard.png" width={445} height={160} />
+			<Image src="/images/flashcard.png" width={445} height={164} alt="header title" />
 
 			<div>
 				<VocabularyNoHolder>

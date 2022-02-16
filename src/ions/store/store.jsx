@@ -64,7 +64,6 @@ const useStore = create(
 			// },
 			setLessonData: lessonData => {
 				set(() => ({ lessonData, filteredData: lessonData }));
-				//console.log("lessonData:", lessonData);
 			},
 
 			currentCard: {
@@ -91,24 +90,52 @@ const useStore = create(
 			setShownCards: card => {
 				set(
 					produce(state => {
+						// has this card been previously shown?
 						if (state.shownCards.find(element => element.cardNumber === card)) {
-							//console.log("multiple found!!!");
+							// then select this element and save it to variable 'multiple'
 							const multiple = state.shownCards.find(
 								element => element.cardNumber === card
 							);
+							// increase the card occurrence variable for this card in the shown cards array
 							multiple.occurrenceSC += 1;
-							//console.log("double.occurrence:", multiple.occurrenceSC);
-							state.currentCard.occurrence = multiple.occurrenceSC;
+							//state.currentCard.occurrence = multiple.occurrenceSC; // not needed anymore, occurrence now only tracked separately
 						} else {
+							// if this card was never shown before, add it to the shownCards array
 							console.log("added new card number");
 							const newCardNumber = {
 								cardNumber: card,
 								occurrenceSC: 1,
+								correct: 0,
+								incorrect: 0,
 							};
 							state.shownCards.push(newCardNumber);
-							console.log("card:", card);
+							state.voted = false;
 						}
-						console.log("=>", JSON.stringify(state.shownCards));
+					})
+				);
+			},
+			voted: false,
+
+			setCorrect: (card, correctAnswer) => {
+				set(
+					produce(state => {
+						if (!state.shownCards.find(element => element.cardNumber === card)) {
+							return;
+						}
+						const cardToBeUpdated = state.shownCards.find(
+							element => element.cardNumber === card
+						);
+
+						if (correctAnswer && !state.voted) {
+							cardToBeUpdated.correct += 1;
+							// state.setVoted(true);
+							state.voted = true;
+							return;
+						}
+						if (!state.voted) {
+							cardToBeUpdated.incorrect += 1;
+							state.voted = true;
+						}
 					})
 				);
 			},

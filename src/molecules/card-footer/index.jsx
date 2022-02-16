@@ -5,19 +5,23 @@ import Stack from "@mui/material/Stack";
 import randomCardNumber from "../../ions/utils/randomCardNumber";
 
 const CardFooter = () => {
+	const currentCard = useStore(state => state.currentCard);
 	const setCurrentCard = useStore(state => state.setCurrentCard);
 	const filteredData = useStore(state => state.filteredData);
 	const setShownCards = useStore(state => state.setShownCards);
 	const flipped = useStore(state => state.flipped);
 	const setFlipped = useStore(state => state.setFlipped);
 	const learnMode = useStore(store => store.learnMode);
+	const setCorrect = useStore(store => store.setCorrect);
+	const voted = useStore(store => store.voted);
 
 	const nextCard = () => {
+		// pick a random card from the filteredData array
 		const randomCard = filteredData[randomCardNumber(filteredData.length - 1)];
-		// console.log("currentCardNo:", randomCard);
+		// and add increase occurrence count OR add it as a new card to the shownCards array
 		setShownCards(randomCard.vocabularyNo);
-		// console.log("=====>", randomCard);
-		setCurrentCard(randomCard); // randomCard
+		// then set this card as the current card to be shown
+		setCurrentCard(randomCard);
 	};
 	return (
 		<CardActions>
@@ -40,20 +44,22 @@ const CardFooter = () => {
 				</Button>
 
 				<Button
-					disabled={learnMode}
+					disabled={learnMode || voted}
 					size="small"
 					color="primary"
 					onClick={() => {
+						setCorrect(currentCard.vocabularyNo, true);
 						console.log("CORRECT");
 					}}
 				>
 					Correct
 				</Button>
 				<Button
-					disabled={learnMode}
+					disabled={learnMode || voted}
 					size="small"
 					color="primary"
 					onClick={() => {
+						setCorrect(currentCard.vocabularyNo, false);
 						console.log("INCORRECT");
 					}}
 				>
