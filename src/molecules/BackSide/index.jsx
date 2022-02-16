@@ -12,7 +12,7 @@ const BackSide = () => {
 		<StyledCardMainArea>
 			<Stack justifyContent="center" alignItems="center" spacing={2}>
 				<CardContent>
-					<Typography align="center" variant="h4" color="text.secondary">
+					<Typography align="center" variant="h5" color="text.secondary">
 						{currentCard.meaning}
 					</Typography>
 				</CardContent>
