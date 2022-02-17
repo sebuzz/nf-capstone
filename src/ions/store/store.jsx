@@ -120,8 +120,11 @@ const useStore = create(
 			},
 			votedCorrect: false,
 			votedIncorrect: false,
+			knowledgeLevel: 24,
+			occurrences: 0,
 
-			setCorrect: (card, correctAnswer) => {
+			setCorrect: (card, correctAnswer = undefined) => {
+				//  when using this function for initialization, correctAnswer is  omitted and accepted as undefined to make parameter completely optional
 				set(
 					produce(state => {
 						if (!state.shownCards.find(element => element.cardNumber === card)) {
@@ -130,6 +133,14 @@ const useStore = create(
 						const cardToBeUpdated = state.shownCards.find(
 							element => element.cardNumber === card
 						);
+						// initially set Gauge ballPosition
+						state.knowledgeLevel =
+							(cardToBeUpdated.correct / cardToBeUpdated.occurrenceSC) * 24 + 24;
+						// update occurrences label
+						state.occurrences = cardToBeUpdated.occurrenceSC;
+						if (correctAnswer === undefined) {
+							return;
+						}
 						// if the 'Correct' button was clicked
 						if (correctAnswer && !state.votedCorrect) {
 							// and it was not previously voted 'incorrect'
@@ -144,10 +155,17 @@ const useStore = create(
 							// toggle the voting states that toggle the buttons
 							state.votedCorrect = true;
 							state.votedIncorrect = false;
+							// set Gauge ballPosition
+
+							state.knowledgeLevel =
+								(cardToBeUpdated.correct / cardToBeUpdated.occurrenceSC) * 24 + 24;
+							// update occurrences label
+							state.occurrences = cardToBeUpdated.occurrenceSC;
+
 							return;
 						}
 						// if the 'Incorrect' button was clicked
-						if (!state.votedIncorrect) {
+						if (!correctAnswer && !state.votedIncorrect) {
 							// and it was not previously voted 'correct'
 							if (!state.votedCorrect) {
 								cardToBeUpdated.correct -= 1;
@@ -158,10 +176,32 @@ const useStore = create(
 							// toggle the voting states that toggle the buttons
 							state.votedIncorrect = true;
 							state.votedCorrect = false;
+							// set Gauge ballPosition
+
+							state.knowledgeLevel =
+								(cardToBeUpdated.correct / cardToBeUpdated.occurrenceSC) * 24 + 24;
+							// update occurrences label
+							state.occurrences = cardToBeUpdated.occurrenceSC;
 						}
 					})
 				);
 			},
+
+			// setKnowledgeLevel: () => {
+			// 	set(
+			// 		produce(state => {
+			// 			if (cardToBeUpdated.occurrenceSC === 0) {
+			// 				state.knowledgeLevel = 24;
+			// 				console.log("KL", state.knowledgeLevel);
+			// 				return;
+			// 			} else {
+			// 				state.knowledgeLevel =
+			// 					(cardToBeUpdated.correct / cardToBeUpdated.occurrenceSC) * 24 +
+			// 					24;
+			// 			}
+			// 		})
+			// 	);
+			// },
 		}),
 		{ name: "myStore" }
 	)

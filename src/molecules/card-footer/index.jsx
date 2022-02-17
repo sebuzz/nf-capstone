@@ -19,10 +19,14 @@ const CardFooter = () => {
 	const nextCard = () => {
 		// pick a random card from the filteredData array
 		const randomCard = filteredData[randomCardNumber(filteredData.length - 1)];
-		// and add increase occurrence count OR add it as a new card to the shownCards array
-		setShownCards(randomCard.vocabularyNo);
+		// and add increase occurrence count OR add it as a new card to the shownCards array -- only if Learn Mode is OFF
+		if (!learnMode) {
+			setShownCards(randomCard.vocabularyNo, 0);
+		}
 		// then set this card as the current card to be shown
 		setCurrentCard(randomCard);
+		// initialize Gauge meter
+		setCorrect(randomCard.vocabularyNo);
 	};
 	return (
 		<CardActions>

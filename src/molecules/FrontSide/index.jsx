@@ -6,13 +6,18 @@ import useStore from "../../ions/store/store";
 import { StyledCardMainArea } from "./styled";
 
 import { Link } from "@mui/material";
-//import Speech from "react-speech";
+import Gauge from "../../atoms/gauge";
 
 const FrontSide = () => {
 	const currentCard = useStore(state => state.currentCard);
 	const showKana = useStore(store => store.showKana);
 	const showTranslation = useStore(store => store.showTranslation);
 	const learnMode = useStore(state => state.learnMode);
+	const knowledgeLevel = useStore(state => state.knowledgeLevel);
+	const occurrences = useStore(state => state.occurrences);
+
+	console.log("knowledge:", knowledgeLevel);
+	console.log("learnMode:", learnMode);
 
 	const speakIt = textToSpeak => {
 		const voices = speechSynthesis.getVoices();
@@ -27,6 +32,7 @@ const FrontSide = () => {
 
 	return (
 		<StyledCardMainArea>
+			{!learnMode && <Gauge ballPosition={knowledgeLevel} occurrences={occurrences} />}
 			<Stack justifyContent="center" alignItems="center" spacing={2}>
 				<CardContent>
 					<Typography gutterBottom align="center" variant="h4" component="div">
@@ -60,13 +66,14 @@ const FrontSide = () => {
 							{currentCard.meaning}
 						</Typography>
 					)}
-					{/*<button*/}
-					{/*	onClick={() => {*/}
-					{/*		speakIt();*/}
-					{/*	}}*/}
-					{/*>*/}
-					{/*	speak*/}
-					{/*</button>*/}
+					<button
+						type="button"
+						onClick={() => {
+							speakIt(currentCard.word);
+						}}
+					>
+						▶
+					</button>
 				</CardContent>
 			</Stack>
 		</StyledCardMainArea>
