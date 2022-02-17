@@ -106,15 +106,16 @@ const useStore = create(
 								cardNumber: card,
 								occurrenceSC: 1,
 								correct: 0,
-								incorrect: 0,
 							};
 							state.shownCards.push(newCardNumber);
-							state.voted = false;
+							state.votedCorrect = false;
+							state.votedIncorrect = false;
 						}
 					})
 				);
 			},
-			voted: false,
+			votedCorrect: false,
+			votedIncorrect: false,
 
 			setCorrect: (card, correctAnswer) => {
 				set(
@@ -125,16 +126,34 @@ const useStore = create(
 						const cardToBeUpdated = state.shownCards.find(
 							element => element.cardNumber === card
 						);
+						// if the 'Correct' button was clicked
+						if (correctAnswer && !state.votedCorrect) {
+							// and it was not previously voted 'incorrect'
+							if (!state.votedIncorrect) {
+								// then add one
+								cardToBeUpdated.correct += 1;
+							} else {
+								// otherwise, re-set and add 1 (add 2)
+								cardToBeUpdated.correct += 2;
+							}
 
-						if (correctAnswer && !state.voted) {
-							cardToBeUpdated.correct += 1;
-							// state.setVoted(true);
-							state.voted = true;
+							// toggle the voting states that toggle the buttons
+							state.votedCorrect = true;
+							state.votedIncorrect = false;
 							return;
 						}
-						if (!state.voted) {
-							cardToBeUpdated.incorrect += 1;
-							state.voted = true;
+						// if the 'Incorrect' button was clicked
+						if (!state.votedIncorrect) {
+							// and it was not previously voted 'correct'
+							if (!state.votedCorrect) {
+								cardToBeUpdated.correct -= 1;
+							} else {
+								// otherwise, re-set and subtract 1 (minus 2)
+								cardToBeUpdated.correct -= 2;
+							}
+							// toggle the voting states that toggle the buttons
+							state.votedIncorrect = true;
+							state.votedCorrect = false;
 						}
 					})
 				);

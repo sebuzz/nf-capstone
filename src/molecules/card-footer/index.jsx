@@ -13,7 +13,8 @@ const CardFooter = () => {
 	const setFlipped = useStore(state => state.setFlipped);
 	const learnMode = useStore(store => store.learnMode);
 	const setCorrect = useStore(store => store.setCorrect);
-	const voted = useStore(store => store.voted);
+	const votedCorrect = useStore(store => store.votedCorrect);
+	const votedIncorrect = useStore(store => store.votedIncorrect);
 
 	const nextCard = () => {
 		// pick a random card from the filteredData array
@@ -44,7 +45,7 @@ const CardFooter = () => {
 				</Button>
 
 				<Button
-					disabled={learnMode || voted}
+					disabled={learnMode || votedCorrect}
 					size="small"
 					color="primary"
 					onClick={() => {
@@ -55,7 +56,7 @@ const CardFooter = () => {
 					Correct
 				</Button>
 				<Button
-					disabled={learnMode || voted}
+					disabled={learnMode || votedIncorrect}
 					size="small"
 					color="primary"
 					onClick={() => {
