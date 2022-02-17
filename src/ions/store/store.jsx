@@ -98,7 +98,9 @@ const useStore = create(
 							);
 							// increase the card occurrence variable for this card in the shown cards array
 							multiple.occurrenceSC += 1;
-							//state.currentCard.occurrence = multiple.occurrenceSC; // not needed anymore, occurrence now only tracked separately
+							// reset buttons
+							state.votedCorrect = false;
+							state.votedIncorrect = false;
 						} else {
 							// if this card was never shown before, add it to the shownCards array
 							console.log("added new card number");
@@ -107,9 +109,11 @@ const useStore = create(
 								occurrenceSC: 1,
 								correct: 0,
 							};
-							state.shownCards.push(newCardNumber);
+							// reset buttons
 							state.votedCorrect = false;
 							state.votedIncorrect = false;
+							// add this new card to the shownCards array
+							state.shownCards.push(newCardNumber);
 						}
 					})
 				);

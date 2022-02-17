@@ -5,7 +5,6 @@ const StyledVocNoHolder = styled.div`
 	display: flex;
 	position: absolute;
 	top: ${pxToRem(100)};
-	left: ${pxToRem(360)};
 	justify-content: center;
 	padding: 0.5em 1em;
 	border: 1px solid rgba(0, 0, 0, 0.3);

@@ -34,6 +34,7 @@ const CardFooter = () => {
 				spacing={2}
 			>
 				<Button
+					disabled={!learnMode && !(votedCorrect || votedIncorrect)}
 					variant="outlined"
 					size="small"
 					color="primary"
