@@ -16,6 +16,7 @@ const Page = () => {
 			const setLessonData = useStore.getState().setLessonData;
 			const setCurrentCard = useStore.getState().setCurrentCard;
 			const selectedLesson = useStore.getState().selectedLesson;
+			const setShownCards = useStore.getState().setShownCards;
 			//console.log("attempting initial fetch lesson data");
 			const { data } = await axios.get(`/vocabulary/japanese/${selectedLesson}.json`);
 
@@ -25,6 +26,7 @@ const Page = () => {
 			const randomCard = lessonData[randomCardNumber(lessonData.length - 1)];
 			setLessonData(lessonData);
 			setCurrentCard(randomCard);
+			setShownCards(randomCard.vocabularyNo);
 		};
 		void callback();
 	}, []);

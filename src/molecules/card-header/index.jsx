@@ -10,28 +10,19 @@ const CardHeader = () => {
 	const currentCard = useStore(state => state.currentCard);
 	const showKana = useStore(state => state.showKana);
 	const showTranslation = useStore(state => state.showTranslation);
-	const shownCards = useStore(state => state.shownCards);
+	//const shownCards = useStore(state => state.shownCards);
 
 	const cardNumber = currentCard.vocabularyNo;
-	const thisCard = shownCards.find(element => element.cardNumber === cardNumber);
-	const timesShown = thisCard ? thisCard.occurrenceSC : 0;
+	//const thisCard = shownCards.find(element => element.cardNumber === cardNumber);
+	//const timesShown = thisCard ? thisCard.occurrenceSC : 0;
 	const debugMode = useStore(store => store.debugMode);
 
 	return (
 		<>
-			{/*<CardMedia*/}
-			{/*	sx={{ marginY: 0 }}*/}
-			{/*	component="img"*/}
-			{/*	height="auto"*/}
-			{/*	image="/images/flashcard.png"*/}
-			{/*	alt={props.lesson}*/}
-			{/*/>*/}
-			<Image src="/images/flashcard.png" width={445} height={160} />
+			<Image src="/images/flashcard.png" width={445} height={164} alt="header title" />
 
 			<div>
-				<VocabularyNoHolder>
-					{cardNumber}, {timesShown}
-				</VocabularyNoHolder>
+				<VocabularyNoHolder>{cardNumber}</VocabularyNoHolder>
 				{debugMode && (
 					<div>
 						<FilteredHolder>{`Show Kana:${showKana}`}</FilteredHolder>
