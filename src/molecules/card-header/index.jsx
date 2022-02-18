@@ -5,6 +5,13 @@ import FilteredHolder from "../../atoms/filtered-holder";
 import TranslationHolder from "../../atoms/translation-holder";
 import MenuDrawer from "../menu-drawer";
 import Image from "next/image";
+import styled from "@emotion/styled";
+
+const StyledHeader = styled.div`
+	display: grid;
+	position: relative;
+	align-items: self-end;
+`;
 
 const CardHeader = () => {
 	const currentCard = useStore(state => state.currentCard);
@@ -12,17 +19,16 @@ const CardHeader = () => {
 	const showTranslation = useStore(state => state.showTranslation);
 	//const shownCards = useStore(state => state.shownCards);
 
-	const cardNumber = currentCard.vocabularyNo;
+	//const cardNumber = currentCard.vocabularyNo;
 	//const thisCard = shownCards.find(element => element.cardNumber === cardNumber);
 	//const timesShown = thisCard ? thisCard.occurrenceSC : 0;
 	const debugMode = useStore(store => store.debugMode);
 
 	return (
-		<>
-			<Image src="/images/flashcard.png" width={445} height={164} alt="header title" />
+		<StyledHeader>
+			<Image src="/images/Logo_Header_@2x.png" width={445} height={164} alt="header title" />
 
 			<div>
-				<VocabularyNoHolder>{cardNumber}</VocabularyNoHolder>
 				{debugMode && (
 					<div>
 						<FilteredHolder>{`Show Kana:${showKana}`}</FilteredHolder>
@@ -31,7 +37,7 @@ const CardHeader = () => {
 				)}
 			</div>
 			<MenuDrawer />
-		</>
+		</StyledHeader>
 	);
 };
 

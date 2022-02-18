@@ -9,6 +9,7 @@ export const StyledCardMainArea = styled.div`
 	border: none;
 	border-radius: ${pxToRem(4)};
 	background: #fefbfd;
+	background-image: url("/images/paper_2.jpg");
 	color: #000;
 	font-size: 1em;
 `;

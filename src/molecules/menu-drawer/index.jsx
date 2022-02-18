@@ -6,6 +6,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
+import { background } from "stylelint-order/rules/shorthandData";
 
 const MenuDrawer = () => {
 	const showKana = useStore(store => store.showKana);
@@ -19,14 +20,14 @@ const MenuDrawer = () => {
 	};
 
 	return (
-		<Paper>
+		<Paper sx={{ backgroundColor: "#d4bca3" }}>
 			<Stack direction="row" paddingLeft="10px">
 				<div>
 					<FormControlLabel
 						control={
 							<Switch
 								defaultChecked
-								color="secondary"
+								color="primary"
 								inputProps={{ "aria-label": "controlled" }}
 								checked={learnMode}
 								onChange={handleChange}
@@ -39,8 +40,8 @@ const MenuDrawer = () => {
 					<Button
 						sx={{ background: showKana ? "none" : "lightblue" }}
 						size="small"
-						variant="outlined"
-						color="secondary"
+						variant="none"
+						color="primary"
 						onClick={() => {
 							toggleField("showKana");
 						}}
@@ -54,8 +55,8 @@ const MenuDrawer = () => {
 						disabled={!learnMode}
 						sx={{ background: showTranslation ? "none" : "lightblue" }}
 						size="small"
-						variant="outlined"
-						color="secondary"
+						variant="none"
+						color="primary"
 						onClick={() => {
 							toggleField("showTranslation");
 						}}
