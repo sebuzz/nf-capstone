@@ -4,12 +4,12 @@ import { pxToRem } from "../../ions/utils/unit";
 export const StyledCardMainArea = styled.div`
 	display: flex;
 	justify-content: center;
-	height: 350px;
+	height: 410px;
 	padding: 0.5em 1em;
 	border: none;
 	border-radius: ${pxToRem(4)};
 	background: #fefbfd;
-	background-image: url("/images/paper_rev_2.jpg");
+	background-image: url("/images/paper_rev_3.jpg");
 	color: #000;
 	font-size: 1em;
 `;

@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import useStore from "../../ions/store/store";
 import { StyledCardMainArea } from "./styled";
-
+import CardHeader from "../../molecules/card-header";
 import { Link } from "@mui/material";
 import Gauge from "../../atoms/gauge";
 import VocabularyNoHolder from "../../atoms/vocabulary-no-holder";
@@ -82,6 +82,7 @@ const FrontSide = () => {
 						▶
 					</button>
 				</CardContent>
+				<CardHeader />
 			</Stack>
 		</StyledCardMainArea>
 	);

@@ -9,8 +9,23 @@ import styled from "@emotion/styled";
 
 const StyledHeader = styled.div`
 	display: grid;
-	position: relative;
+	position: absolute;
 	align-items: self-end;
+	z-index: -1;
+`;
+
+const StyledLogoWrapper = styled.div`
+	position: relative;
+	top: -55px;
+	left: 10px;
+	opacity: 30%;
+`;
+
+const StyledBGWrapper = styled.div`
+	position: relative;
+	top: 100px;
+	left: 0px;
+	opacity: 40%;
 `;
 
 const CardHeader = () => {
@@ -26,7 +41,19 @@ const CardHeader = () => {
 
 	return (
 		<StyledHeader>
-			<Image src="/images/Logo_Header_@2x.png" width={445} height={164} alt="header title" />
+			{/*<Image src="/images/Logo_Header_@2x.png" width={445} height={164} alt="header title" />*/}
+			{/*<img href="/images/Logo_full.svg" alt="logo" />*/}
+			<StyledLogoWrapper>
+				<Image
+					src="/images/Logo_full_05@05.png"
+					width={154}
+					height={98}
+					alt="header title"
+				/>
+			</StyledLogoWrapper>
+			<StyledBGWrapper>
+				<Image src="/images/fuji_05@05.png" width={445} height={104} alt="header title" />
+			</StyledBGWrapper>
 
 			<div>
 				{debugMode && (
@@ -36,7 +63,7 @@ const CardHeader = () => {
 					</div>
 				)}
 			</div>
-			<MenuDrawer />
+			{/*<MenuDrawer />*/}
 		</StyledHeader>
 	);
 };

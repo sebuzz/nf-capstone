@@ -9,6 +9,7 @@ import FlipCard from "../flip-card";
 import FrontSide from "../../molecules/FrontSide";
 import BackSide from "../../molecules/BackSide";
 import styled from "@emotion/styled";
+import MenuDrawer from "../../molecules/menu-drawer";
 
 const StyledPaperBG = styled.div`
 	background: rgb(212, 188, 163);
@@ -34,12 +35,13 @@ const Flashcard = () => {
 			<Card sx={{ width: 445 }}>
 				<Box
 					sx={{
-						height: 550,
+						height: 410,
 						backgroundColor: "#eee",
 					}}
 					alignItems="center"
 				>
-					<CardHeader />
+					{/*<CardHeader />*/}
+					{/*<MenuDrawer />*/}
 					<PaperBG>
 						<Box sx={{ height: 410 }}>
 							<FlipCard

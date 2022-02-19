@@ -5,6 +5,7 @@ import Flashcard from "../organisms/flashcard";
 import useStore from "../ions/store/store";
 import randomCardNumber from "../ions/utils/randomCardNumber";
 import axios from "axios";
+import CardHeader from "../molecules/card-header";
 const defaultProps = {
 	occurrence: 0,
 };
@@ -37,7 +38,7 @@ const Page = () => {
 				<title key="title">KOTOBA - lesson {currentCard.lesson}</title>
 				<meta key="description" name="description" content="This is my capstone project" />
 			</Head>
-
+			{/*<CardHeader />*/}
 			<Flashcard />
 		</Layout>
 	);
