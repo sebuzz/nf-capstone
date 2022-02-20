@@ -1,5 +1,10 @@
 import useStore from "../../ions/store/store";
 import { Button, CardActions } from "@mui/material";
+import { IconButton } from "@mui/material";
+import SkipNextSharpIcon from "@mui/icons-material/SkipNextSharp";
+import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
+import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
+import FlipOutlinedIcon from "@mui/icons-material/FlipOutlined";
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import randomCardNumber from "../../ions/utils/randomCardNumber";
@@ -37,51 +42,55 @@ const CardFooter = () => {
 				alignItems="center"
 				spacing={2}
 			>
-				<Button
+				<IconButton
+					aria-label="next"
 					disabled={!learnMode && !(votedCorrect || votedIncorrect)}
 					variant="outlined"
-					size="small"
+					size="large"
 					color="primary"
 					onClick={() => {
 						nextCard();
 					}}
 				>
-					Next card
-				</Button>
+					<SkipNextSharpIcon />
+				</IconButton>
 
-				<Button
+				<IconButton
+					aria-label="correct"
 					disabled={learnMode || votedCorrect}
-					size="small"
+					size="large"
 					color="primary"
 					onClick={() => {
 						setCorrect(currentCard.vocabularyNo, true);
 						console.log("CORRECT");
 					}}
 				>
-					Correct
-				</Button>
+					<CircleOutlinedIcon />
+				</IconButton>
 				<Button
+					aria-label="incorrect"
 					disabled={learnMode || votedIncorrect}
-					size="small"
+					size="large"
 					color="primary"
 					onClick={() => {
 						setCorrect(currentCard.vocabularyNo, false);
 						console.log("INCORRECT");
 					}}
 				>
-					Incorrect
+					<ClearOutlinedIcon />
 				</Button>
 
 				<Button
+					aria-label="next"
 					disabled={learnMode}
-					size="small"
+					size="large"
 					color="primary"
 					onClick={() => {
 						setFlipped(!flipped);
 						console.log("FLIP CARD");
 					}}
 				>
-					Flip Card
+					<FlipOutlinedIcon />
 				</Button>
 			</Stack>
 		</CardActions>
