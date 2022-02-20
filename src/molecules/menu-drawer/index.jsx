@@ -33,7 +33,7 @@ const MenuDrawer = () => {
 								onChange={handleChange}
 							/>
 						}
-						label=""
+						label="MODE"
 					/>
 				</div>
 				<div>
