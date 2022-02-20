@@ -26,7 +26,8 @@ const MenuDrawer = () => {
 						control={
 							<Switch
 								sx={{ color: "white" }}
-								color="default"
+								size="large"
+								color="primary"
 								inputProps={{ "aria-label": "controlled" }}
 								checked={learnMode}
 								onChange={handleChange}
