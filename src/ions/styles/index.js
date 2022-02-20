@@ -13,6 +13,7 @@ export const globalStyle = css`
 
 	body {
 		margin: 0;
+		background: black;
 		font-size: 1rem;
 	}
 `;
