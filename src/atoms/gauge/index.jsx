@@ -24,7 +24,7 @@ const StyledMeter = styled.div`
 	border: 2px solid;
 	border-radius: 10px;
 	border-color: #bbb;
-	background: lightblue;
+	background: #999;
 `;
 
 // ballColor: 50 = yellow, 0 = red, 100 = green

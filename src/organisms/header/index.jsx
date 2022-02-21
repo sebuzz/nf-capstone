@@ -1,15 +1,61 @@
-import Link from "next/link";
 import React from "react";
+import styled from "@emotion/styled";
+import { IconButton } from "@mui/material";
+import GridOnIcon from "@mui/icons-material/GridOn";
+import HomeIcon from "@mui/icons-material/Home";
+import { useRouter } from "next/router";
+
+const StyledHeader = styled.div`
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	align-items: center;
+	width: 100%;
+	height: 4em;
+	background: linear-gradient(
+		180deg,
+		rgba(39, 53, 86, 0.1) 0%,
+		rgba(26, 39, 86, 1) 35.9%,
+		rgba(26, 39, 86, 1) 55%
+	);
+`;
+const StyledLinkWrapper = styled.div`
+	display: flex;
+	position: fixed;
+	bottom: 0.1em;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	width: 100%;
+`;
 
 const Header = () => {
+	const router = useRouter();
 	return (
-		<header>
+		<StyledHeader>
 			<nav data-test-id="navigation">
-				<Link href="/">Home</Link>
-				<Link href="/about">About me</Link>
-				<Link href="/select-chapter">Select Chapter</Link>
+				<StyledLinkWrapper>
+					<IconButton
+						size="large"
+						color="primary"
+						onClick={() => {
+							router.push("/");
+						}}
+					>
+						<HomeIcon />
+					</IconButton>
+					<IconButton
+						size="large"
+						color="primary"
+						onClick={() => {
+							router.push("/select-chapter");
+						}}
+					>
+						<GridOnIcon />
+					</IconButton>
+				</StyledLinkWrapper>
 			</nav>
-		</header>
+		</StyledHeader>
 	);
 };
 
