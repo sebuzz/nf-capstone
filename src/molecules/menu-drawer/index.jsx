@@ -19,28 +19,29 @@ const MenuDrawer = () => {
 	};
 
 	return (
-		<Paper>
+		<Paper sx={{ backgroundColor: "#1a2756" }}>
 			<Stack direction="row" paddingLeft="10px">
 				<div>
 					<FormControlLabel
 						control={
 							<Switch
-								defaultChecked
-								color="secondary"
+								sx={{ color: "white" }}
+								size="large"
+								color="primary"
 								inputProps={{ "aria-label": "controlled" }}
 								checked={learnMode}
 								onChange={handleChange}
 							/>
 						}
-						label="Learn Mode"
+						label="MODE"
 					/>
 				</div>
 				<div>
 					<Button
-						sx={{ background: showKana ? "none" : "lightblue" }}
+						sx={{ color: "white", background: showKana ? "none" : "lightblue" }}
 						size="small"
-						variant="outlined"
-						color="secondary"
+						variant="none"
+						color="primary"
 						onClick={() => {
 							toggleField("showKana");
 						}}
@@ -52,10 +53,10 @@ const MenuDrawer = () => {
 				<div>
 					<Button
 						disabled={!learnMode}
-						sx={{ background: showTranslation ? "none" : "lightblue" }}
+						sx={{ color: "white", background: showTranslation ? "none" : "lightblue" }}
 						size="small"
-						variant="outlined"
-						color="secondary"
+						variant="none"
+						color="primary"
 						onClick={() => {
 							toggleField("showTranslation");
 						}}

@@ -4,9 +4,10 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 import useStore from "../../ions/store/store";
 import { StyledCardMainArea } from "./styled";
-
+import CardHeader from "../../molecules/card-header";
 import { Link } from "@mui/material";
 import Gauge from "../../atoms/gauge";
+import VocabularyNoHolder from "../../atoms/vocabulary-no-holder";
 
 const FrontSide = () => {
 	const currentCard = useStore(state => state.currentCard);
@@ -15,6 +16,9 @@ const FrontSide = () => {
 	const learnMode = useStore(state => state.learnMode);
 	const knowledgeLevel = useStore(state => state.knowledgeLevel);
 	const occurrences = useStore(state => state.occurrences);
+
+	const cardNumber = currentCard.vocabularyNo;
+	const lessonNumber = currentCard.lesson;
 
 	console.log("knowledge:", knowledgeLevel);
 	console.log("learnMode:", learnMode);
@@ -33,6 +37,9 @@ const FrontSide = () => {
 	return (
 		<StyledCardMainArea>
 			{!learnMode && <Gauge ballPosition={knowledgeLevel} occurrences={occurrences} />}
+			<VocabularyNoHolder>
+				罤 {lessonNumber} 課 - {cardNumber}
+			</VocabularyNoHolder>
 			<Stack justifyContent="center" alignItems="center" spacing={2}>
 				<CardContent>
 					<Typography gutterBottom align="center" variant="h4" component="div">
@@ -75,6 +82,7 @@ const FrontSide = () => {
 						▶
 					</button>
 				</CardContent>
+				<CardHeader />
 			</Stack>
 		</StyledCardMainArea>
 	);

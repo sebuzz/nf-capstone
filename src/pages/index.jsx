@@ -17,7 +17,7 @@ const Page = () => {
 			const setCurrentCard = useStore.getState().setCurrentCard;
 			const selectedLesson = useStore.getState().selectedLesson;
 			const setShownCards = useStore.getState().setShownCards;
-			//console.log("attempting initial fetch lesson data");
+			// attempting initial fetch lesson data
 			const { data } = await axios.get(`/vocabulary/japanese/${selectedLesson}.json`);
 
 			const lessonData = data.vocabulary.map(item => ({ ...item, ...defaultProps }));
@@ -37,8 +37,9 @@ const Page = () => {
 				<title key="title">KOTOBA - lesson {currentCard.lesson}</title>
 				<meta key="description" name="description" content="This is my capstone project" />
 			</Head>
-
-			<Flashcard />
+			<div>
+				<Flashcard />
+			</div>
 		</Layout>
 	);
 };

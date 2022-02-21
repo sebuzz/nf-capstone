@@ -14,41 +14,43 @@ const StyledHeader = styled.div`
 	align-items: self-end;
 `;
 
-const StyledLogoWrapper = styled.div`
+const StyledLogoWrapperFlipped = styled.div`
 	position: absolute;
 	top: -165px;
-	left: -180px;
+	left: 55px;
 	width: 124px;
-	opacity: 20%;
+	transform: scale(-1, 1);
+	opacity: 8%;
 `;
 
-const StyledBGWrapper = styled.div`
+const StyledBGWrapperFlipped = styled.div`
 	position: absolute;
 	top: 80px;
 	left: -220px;
 	width: 445px;
-	opacity: 45%;
+	transform: scale(-1, 1);
+	opacity: 25%;
 `;
 
-const CardHeader = () => {
+const CardHeaderFlipped = () => {
 	const showKana = useStore(state => state.showKana);
 	const showTranslation = useStore(state => state.showTranslation);
 	const debugMode = useStore(store => store.debugMode);
 
 	return (
 		<StyledHeader>
-			<StyledLogoWrapper>
+			<StyledLogoWrapperFlipped>
 				<Image
 					src="/images/Logo_full_05@05.png"
 					width={154}
 					height={98}
 					alt="header title"
 				/>
-			</StyledLogoWrapper>
+			</StyledLogoWrapperFlipped>
 
-			<StyledBGWrapper>
+			<StyledBGWrapperFlipped>
 				<Image src="/images/fuji_05@05.png" width={445} height={104} alt="header title" />
-			</StyledBGWrapper>
+			</StyledBGWrapperFlipped>
 
 			<div>
 				{debugMode && (
@@ -62,4 +64,4 @@ const CardHeader = () => {
 	);
 };
 
-export default CardHeader;
+export default CardHeaderFlipped;

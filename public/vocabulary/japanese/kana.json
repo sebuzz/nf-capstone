@@ -1,0 +1,390 @@
+{
+  "kana-set": "hiragana",
+  "basic": [
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["あ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["い"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["う"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["え"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["お"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["か"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["き"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["く"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["け"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["こ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["さ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["し"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["す"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["せ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["そ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["た"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ち"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["つ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["て"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["と"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["な"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["に"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ぬ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ね"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["の"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["は"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ひ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ふ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["へ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ほ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ま"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["み"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["む"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["め"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["も"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["や"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "fill",
+      "vowel": [""],
+      "number": 0
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ゆ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "fill",
+      "vowel": [""],
+      "number": 0
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["よ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ら"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["り"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["る"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["れ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ろ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["わ"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "fill",
+      "vowel": [""],
+      "number": 0
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "fill",
+      "vowel": [""],
+      "number": 0
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "fill",
+      "vowel": [""],
+      "number": 0
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["を"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "basic",
+      "vowel": ["ん"],
+      "number": 1
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "fill",
+      "vowel": [""],
+      "number": 0
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "fill",
+      "vowel": [""],
+      "number": 0
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "fill",
+      "vowel": [""],
+      "number": 0
+    },
+    {
+      "id": "",
+      "type": "hiragana",
+      "sub-type": "fill",
+      "vowel": [""],
+      "number": 0
+    }
+  ]
+}
