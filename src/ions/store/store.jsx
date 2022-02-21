@@ -108,6 +108,7 @@ const useStore = create(
 								cardNumber: card,
 								occurrenceSC: 1,
 								correct: 0,
+								lesson: state.selectedLesson,
 							};
 							// reset buttons
 							state.votedCorrect = false;
@@ -186,22 +187,6 @@ const useStore = create(
 					})
 				);
 			},
-
-			// setKnowledgeLevel: () => {
-			// 	set(
-			// 		produce(state => {
-			// 			if (cardToBeUpdated.occurrenceSC === 0) {
-			// 				state.knowledgeLevel = 24;
-			// 				console.log("KL", state.knowledgeLevel);
-			// 				return;
-			// 			} else {
-			// 				state.knowledgeLevel =
-			// 					(cardToBeUpdated.correct / cardToBeUpdated.occurrenceSC) * 24 +
-			// 					24;
-			// 			}
-			// 		})
-			// 	);
-			// },
 		}),
 		{ name: "myStore" }
 	)
