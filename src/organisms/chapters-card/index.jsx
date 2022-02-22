@@ -20,15 +20,29 @@ const ChaptersCard = () => {
 		router.push("/");
 	};
 	const calculateBoxColor = number => {
-		const thisLesson = shownCards.filter(item => item.lesson === number);
-		console.log(thisLesson);
+		// filter out only this lesson
+		const thisLessonShown = shownCards.filter(item => item.lesson === number);
+		//const numberOfWords = useStore(state => state.numberOfWords);
+		console.log(thisLessonShown);
+		// sum all 'correct' values of the lesson and also set the (full) lesson length parameter (numberOfWords)
 		let sum = 0;
-		thisLesson.forEach(word => (sum += word.correct / word.occurrenceSC));
+		let numberOfWords = 0;
+		thisLessonShown.forEach(word => {
+			sum += word.correct / word.occurrenceSC;
+			numberOfWords = word.numberOfWords;
+		});
 		console.log("sum: ", sum);
-		let knowledgeLevel = (sum / thisLesson.length) * 24 + 24;
+		// calculate the knowledgeLevel
+		let knowledgeLevel = (sum / thisLessonShown.length) * 24 + 24;
 		console.log("KnLevel:", knowledgeLevel, "lesson:", number);
-		return knowledgeLevel;
+		// calculate the percentage of viewed cards of the current lesson
+		const percent = thisLessonShown.length / numberOfWords;
+		console.log("percent:", percent);
+		// return both
+		return { knowledgeLevel, percent };
 	};
+	console.log("calculate...", calculateBoxColor(7));
+
 	return (
 		<ChapterWrapper>
 			<Card sx={{ width: 445, background: "none" }}>
@@ -37,21 +51,28 @@ const ChaptersCard = () => {
 						return (
 							<ChapterSelector
 								key={item.id}
-								ballPosition={calculateBoxColor(item.id)}
+								ballPosition={calculateBoxColor(item.id).knowledgeLevel}
+								percent={calculateBoxColor(item.id).percent}
+								onClick={() => {
+									setMyChapter(item.id);
+								}}
 							>
-								<button
-									type="button"
-									style={{
-										color: "black",
-										margin: 0,
-										alignContent: "center",
-									}}
-									onClick={() => {
-										setMyChapter(item.id);
-									}}
-								>
-									{item.id}
-								</button>
+								<label>
+									<h2>{item.id}</h2>
+								</label>
+								{/*<button*/}
+								{/*	type="button"*/}
+								{/*	style={{*/}
+								{/*		color: "black",*/}
+								{/*		margin: 0,*/}
+								{/*		alignContent: "center",*/}
+								{/*	}}*/}
+								{/*	onClick={() => {*/}
+								{/*		setMyChapter(item.id);*/}
+								{/*	}}*/}
+								{/*>*/}
+								{/*	{item.id}*/}
+								{/*</button>*/}
 							</ChapterSelector>
 						);
 					})}

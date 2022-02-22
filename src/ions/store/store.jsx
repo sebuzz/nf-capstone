@@ -31,6 +31,7 @@ const useStore = create(
 			},
 			lessonData: [],
 			filteredData: [],
+			lessonLength: [],
 
 			showKana: true,
 			showTranslation: true,
@@ -63,7 +64,8 @@ const useStore = create(
 			// 	});
 			// },
 			setLessonData: lessonData => {
-				set(() => ({ lessonData, filteredData: lessonData }));
+				const lessonLength = lessonData.length;
+				set(() => ({ lessonData, filteredData: lessonData, lessonLength }));
 			},
 
 			currentCard: {
@@ -109,6 +111,7 @@ const useStore = create(
 								occurrenceSC: 1,
 								correct: 0,
 								lesson: state.selectedLesson,
+								numberOfWords: state.lessonLength,
 							};
 							// reset buttons
 							state.votedCorrect = false;

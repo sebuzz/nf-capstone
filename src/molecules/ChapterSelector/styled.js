@@ -1,14 +1,14 @@
 import styled from "@emotion/styled";
 import { pxToRem } from "../../ions/utils/unit";
 
-const StyledChapterSelector = styled.div`
+export const StyledChapterSelector = styled.div`
+	position: relative;
 	width: ${pxToRem(50)};
+	width: ${props => props.percent * 50}px;
 	max-width: ${pxToRem(50)};
 	height: ${pxToRem(50)};
 	max-height: ${pxToRem(50)};
-	margin: ${pxToRem(10)};
-	padding: 0.5em 1em;
-	border: 1px solid rgba(0, 0, 0, 0.3);
+	border: none;
 	border-radius: ${pxToRem(4)};
 	background: hsl(${props => props.ballColor}, 90%, 50%);
 	color: #000;
@@ -23,4 +23,16 @@ const StyledChapterSelector = styled.div`
 	}
 `;
 
-export default StyledChapterSelector;
+export const StyledChapterSelectorWrapper = styled.div`
+	display: flex;
+	position: relative;
+	width: ${pxToRem(50)};
+	max-width: ${pxToRem(50)};
+	height: ${pxToRem(50)};
+	max-height: ${pxToRem(50)};
+	margin: ${pxToRem(10)};
+	border: 1px solid rgba(26, 39, 86, 1);
+	border-radius: ${pxToRem(4)};
+	background: rgba(26, 39, 86, 1);
+	box-shadow: 12px 12px 12px 1px rgba(0, 0, 5, 0.5);
+`;
