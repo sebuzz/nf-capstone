@@ -70,7 +70,7 @@ const FrontSide = () => {
 					)}
 					{learnMode && showTranslation && (
 						<Typography align="center" variant="body2" color="text.secondary">
-							{currentCard.meaning}
+							{currentCard.meaning.join(", ")}
 						</Typography>
 					)}
 					<button
