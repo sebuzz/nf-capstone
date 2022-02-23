@@ -14,7 +14,7 @@ const BackSide = () => {
 			<Stack justifyContent="center" alignItems="center" spacing={2}>
 				<CardContent>
 					<Typography align="center" variant="h5" color="text.secondary">
-						{currentCard.meaning}
+						{currentCard.meaning.join(", ")}
 					</Typography>
 				</CardContent>
 				<CardHeaderFlipped />
