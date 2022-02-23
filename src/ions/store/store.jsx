@@ -6,6 +6,10 @@ const useStore = create(
 	persist(
 		set => ({
 			debugMode: false,
+			cursive: false,
+			setCursive(cursive) {
+				set({ cursive });
+			},
 			flipped: false,
 			setFlipped(flipped) {
 				set({ flipped });
