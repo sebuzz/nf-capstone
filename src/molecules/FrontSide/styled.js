@@ -5,7 +5,7 @@ export const StyledCardMainArea = styled.div`
 	display: flex;
 	z-index: 5;
 	justify-content: center;
-	height: 410px;
+	height: ${pxToRem(410)};
 	padding: 0.5em 1em;
 	border: none;
 	border-radius: ${pxToRem(4)};
