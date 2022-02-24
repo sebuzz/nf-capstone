@@ -26,6 +26,14 @@ const StyledLogoDiv = styled.div`
 	align-items: center;
 `;
 
+const StyledAboutWrapper = styled.div`
+	display: flex;
+	margin-top: 0;
+	background-image: url("/images/Hokusai-Wave_gold_l.png");
+	background-repeat: no-repeat;
+	background-position: bottom;
+`;
+
 const AboutModal = () => {
 	const [open, setOpen] = React.useState(false);
 	const handleOpen = () => setOpen(true);
@@ -49,28 +57,30 @@ const AboutModal = () => {
 				onClose={handleClose}
 			>
 				<Box sx={style}>
-					<Typography id="modal-modal-title" variant="h5" component="h2">
-						KOTOBA NINJA
-					</Typography>
-					<Typography id="modal-modal-description" sx={{ mt: 2 }}>
-						Japanese Vocabulary Learning App
-						<br />
-						<small>Version 1.0</small>
-						<br />
-						<br />
-						<StyledLogoDiv>
-							<Image
-								src="/images/Logo_full.png"
-								width={200}
-								height={134}
-								alt="Logo"
-							/>
-						</StyledLogoDiv>
-						<Stack direction="row">
-							<CopyrightIcon fontSize="small" />
-							<small>2022 - Sebus</small>
-						</Stack>
-					</Typography>
+					<StyledAboutWrapper>
+						<Typography id="modal-modal-title" variant="h5" component="h2">
+							KOTOBA NINJA
+						</Typography>
+						<Typography id="modal-modal-description" sx={{ mt: 2 }}>
+							Japanese Vocabulary Learning App
+							<br />
+							<small>Version 1.0</small>
+							<br />
+							<br />
+							<StyledLogoDiv>
+								<Image
+									src="/images/Logo_full.png"
+									width={200}
+									height={134}
+									alt="Logo"
+								/>
+							</StyledLogoDiv>
+							<Stack direction="row">
+								<CopyrightIcon fontSize="small" />
+								<small>2022 - Sebus</small>
+							</Stack>
+						</Typography>
+					</StyledAboutWrapper>
 				</Box>
 			</Modal>
 		</div>
