@@ -3,6 +3,7 @@ import React from "react";
 
 import ChaptersCard from "../organisms/chapters-card";
 import Header from "../organisms/header";
+import Footer from "../organisms/footer";
 
 const Page = () => {
 	return (
@@ -14,6 +15,7 @@ const Page = () => {
 
 			<ChaptersCard />
 			<Header />
+			<Footer />
 		</div>
 	);
 };

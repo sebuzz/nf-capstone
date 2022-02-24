@@ -6,6 +6,7 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Switch from "@mui/material/Switch";
+import SwipeableTemporaryDrawer from "../swipe-menu";
 
 const MenuDrawer = () => {
 	const showKana = useStore(store => store.showKana);
@@ -64,6 +65,7 @@ const MenuDrawer = () => {
 						Hide Translation
 					</Button>
 				</div>
+				<SwipeableTemporaryDrawer />
 			</Stack>
 		</Paper>
 	);

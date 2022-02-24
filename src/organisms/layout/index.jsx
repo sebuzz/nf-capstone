@@ -1,23 +1,21 @@
 import React from "react";
 import Footer from "../footer";
 import Header from "../header";
-//import CardHeader from "../../molecules/card-header";
-import MenuDrawer from "../../molecules/menu-drawer";
 import styled from "@emotion/styled";
+import TopBar from "../../molecules/top-bar";
 
 const Spacer = () => {
 	return <StyledSpacer />;
 };
 
 const StyledSpacer = styled.div`
-	height: 1vh;
+	height: 0.1vh;
 `;
 
 const Layout = ({ children }) => {
 	return (
 		<>
-			{/*<CardHeader />*/}
-			<MenuDrawer />
+			<TopBar />
 			<Spacer />
 			<main>{children}</main>
 			<Header />

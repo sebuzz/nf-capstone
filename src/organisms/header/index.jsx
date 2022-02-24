@@ -10,13 +10,8 @@ const StyledHeader = styled.div`
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	height: 4em;
-	background: linear-gradient(
-		180deg,
-		rgba(39, 53, 86, 0.1) 0%,
-		rgba(26, 39, 86, 1) 35.9%,
-		rgba(26, 39, 86, 1) 55%
-	);
+	height: 3em;
+	background: rgb(25, 35, 56);
 `;
 const StyledLinkWrapper = styled.div`
 	display: flex;
