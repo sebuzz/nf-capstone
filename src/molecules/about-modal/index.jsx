@@ -47,24 +47,9 @@ const AboutModal = () => {
 						Japanese Vocabulary Learning App
 						<br />
 						<br />
-						In <b>Learning Mode</b> you can view the vocabulary words freely, without
-						any statistics or testing functionality.
-						<br />
-						<i>
-							Learning Mode is enabled / disabled in the dropdown menu in the top left
-							corner.
-						</i>
-						<br />
-						<br /> However, with <b>Learning Mode disabled</b>, the colored indicator in
-						the top right corner of each card will show you how well you know this word
-						based on how many times you voted your answer as correct compared to false
-						answers, in relation to how many times you have seen this card already.
-						<br />
-						<br />
-						Furthermore, depending on the mode you`ve selected, you can customize the
-						font, if you want to see the Kana or rather only the Kanji writing and if
-						the translation should be hidden in Learning mode.
+						(c)2022 - Sebus
 					</Typography>
+					<Image src="/images/Logo_full.png" width={200} height={134} alt="Logo" />
 				</Box>
 			</Modal>
 		</div>
