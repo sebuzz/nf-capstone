@@ -12,6 +12,7 @@ import TranslateIcon from "@mui/icons-material/Translate";
 import useStore from "../../ions/store/store";
 import MenuIcon from "@mui/icons-material/Menu";
 import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
 
 const SwipeableTemporaryDrawer = () => {
 	const [state, setState] = React.useState({
@@ -131,6 +132,9 @@ const SwipeableTemporaryDrawer = () => {
 			<React.Fragment key="top">
 				<IconButton color="primary" onClick={toggleDrawer("top", true)}>
 					<MenuIcon />
+					<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+						&nbsp; KOTOBA NINJA
+					</Typography>
 				</IconButton>
 				<SwipeableDrawer
 					anchor="top"
