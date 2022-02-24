@@ -3,8 +3,8 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Image from "next/image";
 import SwipeableTemporaryDrawer from "../swipe-menu";
+import AboutModal from "../about-modal";
 
 const TopBar = () => {
 	return (
@@ -13,15 +13,9 @@ const TopBar = () => {
 				<Toolbar>
 					<SwipeableTemporaryDrawer />
 					<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-						KOTOBA NINJA
+						&nbsp;
 					</Typography>
-					<Image
-						layout="fixed"
-						src="/images/Logo_light-blue.png"
-						alt="Kotoba Ninja Logo"
-						width={83}
-						height={50}
-					/>
+					<AboutModal />
 				</Toolbar>
 			</AppBar>
 		</Box>
