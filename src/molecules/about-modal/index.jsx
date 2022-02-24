@@ -4,6 +4,9 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import Image from "next/image";
+import CopyrightIcon from "@mui/icons-material/Copyright";
+import Stack from "@mui/material/Stack";
+import styled from "@emotion/styled";
 
 const style = {
 	position: "absolute",
@@ -16,6 +19,12 @@ const style = {
 	boxShadow: 24,
 	p: 4,
 };
+
+const StyledLogoDiv = styled.div`
+	display: flex;
+	position: relative;
+	align-items: center;
+`;
 
 const AboutModal = () => {
 	const [open, setOpen] = React.useState(false);
@@ -46,10 +55,22 @@ const AboutModal = () => {
 					<Typography id="modal-modal-description" sx={{ mt: 2 }}>
 						Japanese Vocabulary Learning App
 						<br />
+						<small>Version 1.0</small>
 						<br />
-						(c)2022 - Sebus
+						<br />
+						<StyledLogoDiv>
+							<Image
+								src="/images/Logo_full.png"
+								width={200}
+								height={134}
+								alt="Logo"
+							/>
+						</StyledLogoDiv>
+						<Stack direction="row">
+							<CopyrightIcon fontSize="small" />
+							<small>2022 - Sebus</small>
+						</Stack>
 					</Typography>
-					<Image src="/images/Logo_full.png" width={200} height={134} alt="Logo" />
 				</Box>
 			</Modal>
 		</div>

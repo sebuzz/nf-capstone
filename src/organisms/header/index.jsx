@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { IconButton } from "@mui/material";
 import GridOnIcon from "@mui/icons-material/GridOn";
 import HomeIcon from "@mui/icons-material/Home";
+import HelpCenterIcon from "@mui/icons-material/HelpCenter";
 import { useRouter } from "next/router";
 
 const StyledHeader = styled.div`
@@ -46,6 +47,16 @@ const Header = () => {
 						}}
 					>
 						<GridOnIcon />
+					</IconButton>
+
+					<IconButton
+						size="large"
+						color="primary"
+						onClick={() => {
+							router.push("/manual");
+						}}
+					>
+						<HelpCenterIcon />
 					</IconButton>
 				</StyledLinkWrapper>
 			</nav>
