@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import ListItem from "@mui/material/ListItem";
@@ -11,6 +10,8 @@ import LocalLibraryIcon from "@mui/icons-material/LocalLibrary";
 import Check from "@mui/icons-material/Check";
 import TranslateIcon from "@mui/icons-material/Translate";
 import useStore from "../../ions/store/store";
+import MenuIcon from "@mui/icons-material/Menu";
+import IconButton from "@mui/material/IconButton";
 
 const SwipeableTemporaryDrawer = () => {
 	const [state, setState] = React.useState({
@@ -128,7 +129,9 @@ const SwipeableTemporaryDrawer = () => {
 	return (
 		<div>
 			<React.Fragment key="top">
-				<Button onClick={toggleDrawer("top", true)}>menu</Button>
+				<IconButton color="primary" onClick={toggleDrawer("top", true)}>
+					<MenuIcon />
+				</IconButton>
 				<SwipeableDrawer
 					anchor="top"
 					open={state["top"]}

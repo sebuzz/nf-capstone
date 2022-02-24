@@ -51,22 +51,6 @@ const useStore = create(
 					})
 				);
 			},
-			// MAYBE needed to filter
-			// setFilter: type => {
-			// 	set(state => {
-			// 		switch (type) {
-			// 			case "kanji":
-			// 				return {
-			// 					filteredData: state.lessonData.filter(word => word.kanji.length > 0),
-			// 				};
-			//
-			// 			default:
-			// 				return {
-			// 					filteredData: state.lessonData,
-			// 				};
-			// 		}
-			// 	});
-			// },
 			setLessonData: lessonData => {
 				const lessonLength = lessonData.length;
 				set(() => ({ lessonData, filteredData: lessonData, lessonLength }));

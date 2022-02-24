@@ -13,7 +13,7 @@ const StyledVocNoHolder = styled.div`
 	border-radius: ${pxToRem(4)};
 	background: rgba(59, 65, 69, 0.1);
 	color: rgba(39, 53, 86, 0.5);
-	font-size: 0.9em;
+	font-size: 1em;
 `;
 
 export default StyledVocNoHolder;

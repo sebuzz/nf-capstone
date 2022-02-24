@@ -11,7 +11,7 @@ const StyledHeader = styled.div`
 	bottom: 0;
 	width: 100%;
 	height: 3em;
-	background: rgba(26, 39, 86, 1);
+	background: rgb(25, 35, 56);
 `;
 const StyledLinkWrapper = styled.div`
 	display: flex;

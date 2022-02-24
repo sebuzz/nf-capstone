@@ -1,8 +1,8 @@
 import React from "react";
 import Footer from "../footer";
 import Header from "../header";
-import MenuDrawer from "../../molecules/menu-drawer";
 import styled from "@emotion/styled";
+import TopBar from "../../molecules/top-bar";
 
 const Spacer = () => {
 	return <StyledSpacer />;
@@ -15,7 +15,7 @@ const StyledSpacer = styled.div`
 const Layout = ({ children }) => {
 	return (
 		<>
-			<MenuDrawer />
+			<TopBar />
 			<Spacer />
 			<main>{children}</main>
 			<Header />

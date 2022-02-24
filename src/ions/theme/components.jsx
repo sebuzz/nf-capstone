@@ -2,7 +2,8 @@ export const MuiAppBar = {
 	defaultProps: {},
 	styleOverrides: {
 		root: {
-			backgroundColor: "#FFFFFF",
+			backgroundColor: "#192338",
+			color: "#93b8c2",
 		},
 	},
 };
