@@ -1,10 +1,11 @@
-# My Capstone Project
+# KOTOBA NINJA
 
-This is a Japanese Vocabulary learning App.
-This first iteration contains the first steps, displaying a simple flash card, which fetches random words from the database.
-On each button click, a new card is being displayed.
-
-More features are being added on a daily basis.
+## This is a Japanese Vocabulary learning App
+A custom API with over 2200 words and customisable learning styles lets you memorise Japanese vocabulary in a breeze!  
+Stats are tracked and displayed, so you always have an overview of your learning progress.  
+  
+  
+![Kotoba_Ninja](https://user-images.githubusercontent.com/17763473/155751203-6e08d543-60c5-4a7b-958d-4f60ca1d22ba.png)
 
 Have fun learning some Japanese words! :)
 
@@ -20,117 +21,3 @@ It uses the following tools/libraries:
 * [Eslint](https://eslint.org/)
 * [Prettier](https://prettier.io/)
 
-## Getting started
-
-**Run the development server:**
-
-```bash
-npm run dev
-```
-
-**Run storybook:**
-
-```shell
-npm run storybook
-```
-
-
-## Atomic design
-
-We use atomic design. You can read more about our decision in the
-[documentation](./docs/ATOMIC_DESIGN.md).
-
-## Behavior Driven Development
-
-We use behavior tests. You can read more about our decision in the
-[documentation](./docs/BEHAVIOR_DRIVEN_DEVELOPMENT.md).
-
-## Test Driven Development
-
-We jest to write unit tests. Please look at the Documentation for [Jest](https://jestjs.io/)
-and [testing-library](https://testing-library.com/docs/react-testing-library/intro/).
-
-## Commitlint
-
-We use commitlint to ensure conventional commit messages. You can read more about our decision in
-the [documentation](./docs/COMMITS.md).
-
-
-## Commands
-
-**Run the development server:**
-
-```bash
-npm run dev
-```
-
-**Build:**
-
-```shell
-npm run build
-```
-
-**Run storybook:**
-
-```shell
-npm run storybook
-```
-
-**Build storybook:**
-
-```shell
-npm run storybook:build
-```
-
-**Run e2e tests:**
-
-```shell
-npm run cypress # local without server
-# npm run cypress:run # headless
-# npm run test:e2e # with server
-```
-
-**Run unit tests:**
-
-```shell
-npm run jest
-# npm run jest:watch # watch
-# npm run test:unit # same as "npm run jest"
-```
-
-**Run all tests:**
-
-```shell
-npm run test
-```
-
-**Run stylelint**
-
-```shell
-npm run stylelint
-```
-
-**Run eslint**
-
-```shell
-npm run eslint
-```
-
-**Run all linters**
-
-```shell
-npm run lint
-```
-
-## Skipping linters
-
-If you need to skip a linter you can add the `--no-verify` flag.
-
-> Warning! We strongly advise against skipping linters.
-
-```shell
-# Skipping commitlint
-git commit README.md -m "this is a dirty commit" --no-verify
-# Skipping linters
-git push --no-verify
-```
