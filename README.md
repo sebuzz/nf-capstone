@@ -22,3 +22,4 @@ It uses the following tools/libraries:
 * [Eslint](https://eslint.org/)
 * [Prettier](https://prettier.io/)
 
+This is my capstone project for the web development bootcamp at [neufische.de](https://neuefische.de)  ![neuefische](https://user-images.githubusercontent.com/17763473/155759709-c7cffe5d-26a0-4aaa-ad86-e9f7b9cbaa16.png)
