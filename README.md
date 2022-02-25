@@ -11,9 +11,10 @@ Have fun learning some Japanese words! :)
 
 It uses the following tools/libraries:
 
-* React / Next.js
-
-* [Storybook](https://storybook.js.org/)
+* [React](https://reactjs.org/)
+* [Next.js](https://nextjs.org/)
+* [Zustand](https://www.npmjs.com/package/zustand)
+* [Emotion](https://emotion.sh/docs/introduction)
 * [Cypress](https://cypress.io/)
 * [Jest](https://jestjs.io/)
 * [Commitlint](https://commitlint.js.org/)
