@@ -9,6 +9,10 @@ Stats are tracked and displayed, so you always have an overview of your learning
 
 Have fun learning some Japanese words! :)
 
+
+https://user-images.githubusercontent.com/17763473/155763145-7503e1b0-f3b0-4842-95e3-dc452b1783dd.mp4
+
+
 It uses the following tools/libraries:
 
 * [React](https://reactjs.org/)
