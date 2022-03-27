@@ -8,6 +8,7 @@ import CardHeader from "../../molecules/card-header";
 import { Link } from "@mui/material";
 import Gauge from "../../atoms/gauge";
 import VocabularyNoHolder from "../../atoms/vocabulary-no-holder";
+import { useEffect, useState } from "react";
 
 const FrontSide = () => {
 	const currentCard = useStore(state => state.currentCard);
@@ -20,11 +21,14 @@ const FrontSide = () => {
 	const cardNumber = currentCard.vocabularyNo;
 	const lessonNumber = currentCard.lesson;
 
-	console.log("knowledge:", knowledgeLevel);
-	console.log("learnMode:", learnMode);
+	const [voices, setVoices] = useState([]);
+
+	useEffect(() => {
+		const myVoices = speechSynthesis.getVoices();
+		setVoices(myVoices);
+	});
 
 	const speakIt = textToSpeak => {
-		const voices = speechSynthesis.getVoices();
 		const utterance = new SpeechSynthesisUtterance(textToSpeak);
 		//utterance.voice = voices[21]; // 18 58 // 21 // 58 works best for macOS Chrome, 21 for iOS
 		utterance.voice = voices.find(element => element.lang === "ja-JP");
