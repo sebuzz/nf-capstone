@@ -110,6 +110,15 @@ const useStore = create(
 					})
 				);
 			},
+			// recent cards array holds cards that were shown in this lesson's session - for going back purposes
+			recentCards: [],
+			setRecentCards: () => {
+				set(
+					produce(state => {
+						state.recentCards.push(state.currentCard.vocabularyNo);
+					})
+				);
+			},
 			votedCorrect: false,
 			votedIncorrect: false,
 			knowledgeLevel: 24,

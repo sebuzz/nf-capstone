@@ -20,6 +20,7 @@ const CardFooter = () => {
 	const setCorrect = useStore(store => store.setCorrect);
 	const votedCorrect = useStore(store => store.votedCorrect);
 	const votedIncorrect = useStore(store => store.votedIncorrect);
+	const setRecentCards = useStore(store => store.setRecentCards);
 
 	const nextCard = () => {
 		// pick a random card from the filteredData array
@@ -62,6 +63,7 @@ const CardFooter = () => {
 					color="primary"
 					onClick={() => {
 						setCorrect(currentCard.vocabularyNo, true);
+						setRecentCards();
 						console.log("CORRECT");
 					}}
 				>
@@ -74,6 +76,7 @@ const CardFooter = () => {
 					color="primary"
 					onClick={() => {
 						setCorrect(currentCard.vocabularyNo, false);
+						setRecentCards();
 						console.log("INCORRECT");
 					}}
 				>
