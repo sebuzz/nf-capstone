@@ -26,7 +26,8 @@ const FrontSide = () => {
 	useEffect(() => {
 		const myVoices = speechSynthesis.getVoices();
 		setVoices(myVoices);
-	});
+		console.log("voices set");
+	}, [cardNumber]);
 
 	const speakIt = textToSpeak => {
 		const utterance = new SpeechSynthesisUtterance(textToSpeak);
