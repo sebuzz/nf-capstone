@@ -43,10 +43,13 @@ const CardFooter = () => {
 		const myRecentCards = [...recentCards];
 
 		await setPrevCard();
-
-		const lastCardNumber = myRecentCards.pop();
-		const previousCard = filteredData.find(element => element.vocabularyNo === lastCardNumber);
-		setCurrentCard(previousCard);
+		if (myRecentCards.length > 0) {
+			const lastCardNumber = myRecentCards.pop();
+			const previousCard = filteredData.find(
+				element => element.vocabularyNo === lastCardNumber
+			);
+			setCurrentCard(previousCard);
+		}
 	};
 	return (
 		<CardActions>
@@ -74,6 +77,7 @@ const CardFooter = () => {
 				{!legacyMode && (
 					<IconButton
 						aria-label="back"
+						disabled={!recentCards.length > 0}
 						variant="outlined"
 						size="large"
 						color="primary"

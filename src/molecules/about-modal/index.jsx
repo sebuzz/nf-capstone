@@ -64,7 +64,7 @@ const AboutModal = () => {
 						<Typography id="modal-modal-description" sx={{ mt: 2 }}>
 							Japanese Vocabulary Learning App
 							<br />
-							<small>Version 1.1.0</small>
+							<small>Version 1.1.1</small>
 							<br />
 							<br />
 							<StyledLogoDiv>

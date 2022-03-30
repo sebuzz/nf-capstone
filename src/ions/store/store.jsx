@@ -58,7 +58,12 @@ const useStore = create(
 			},
 			setLessonData: lessonData => {
 				const lessonLength = lessonData.length;
-				set(() => ({ lessonData, filteredData: lessonData, lessonLength }));
+				set(() => ({
+					lessonData,
+					filteredData: lessonData,
+					lessonLength,
+					recentCards: [],
+				}));
 			},
 
 			currentCard: {
