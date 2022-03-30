@@ -5,6 +5,11 @@ import { persist } from "zustand/middleware";
 const useStore = create(
 	persist(
 		set => ({
+			// legacy Mode is the old behaviour where you have to click onto 'next Card' to advance
+			legacyMode: false,
+			setLegacyMode(legacyMode) {
+				set({ legacyMode });
+			},
 			debugMode: false,
 			cursive: false,
 			setCursive(cursive) {
@@ -107,6 +112,24 @@ const useStore = create(
 							// add this new card to the shownCards array
 							state.shownCards.push(newCardNumber);
 						}
+					})
+				);
+			},
+			// recent cards array holds cards that were shown in this lesson's session - for going back purposes
+			recentCards: [],
+			setRecentCards: () => {
+				set(
+					produce(state => {
+						state.recentCards.push(state.currentCard.vocabularyNo);
+					})
+				);
+			},
+			prevCard: 0,
+			setPrevCard: () => {
+				set(
+					produce(state => {
+						state.prevCard = state.recentCards.pop();
+						// return state.prevCard;
 					})
 				);
 			},

@@ -5,6 +5,7 @@ import SkipNextSharpIcon from "@mui/icons-material/SkipNextSharp";
 import CircleOutlinedIcon from "@mui/icons-material/CircleOutlined";
 import ClearOutlinedIcon from "@mui/icons-material/ClearOutlined";
 import FlipOutlinedIcon from "@mui/icons-material/FlipOutlined";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import * as React from "react";
 import Stack from "@mui/material/Stack";
 import randomCardNumber from "../../ions/utils/randomCardNumber";
@@ -20,6 +21,11 @@ const CardFooter = () => {
 	const setCorrect = useStore(store => store.setCorrect);
 	const votedCorrect = useStore(store => store.votedCorrect);
 	const votedIncorrect = useStore(store => store.votedIncorrect);
+	const recentCards = useStore(store => store.recentCards);
+	const setRecentCards = useStore(store => store.setRecentCards);
+	//const prevCard = useStore(store => store.prevCard);
+	const setPrevCard = useStore(store => store.setPrevCard);
+	const legacyMode = useStore(store => store.legacyMode);
 
 	const nextCard = () => {
 		// pick a random card from the filteredData array
@@ -33,6 +39,15 @@ const CardFooter = () => {
 		// initialize Gauge meter
 		setCorrect(randomCard.vocabularyNo);
 	};
+	const goBack = async () => {
+		const myRecentCards = [...recentCards];
+
+		await setPrevCard();
+
+		const lastCardNumber = myRecentCards.pop();
+		const previousCard = filteredData.find(element => element.vocabularyNo === lastCardNumber);
+		setCurrentCard(previousCard);
+	};
 	return (
 		<CardActions>
 			<Stack
@@ -42,18 +57,33 @@ const CardFooter = () => {
 				alignItems="center"
 				spacing={2}
 			>
-				<IconButton
-					aria-label="next"
-					disabled={!learnMode && !(votedCorrect || votedIncorrect)}
-					variant="outlined"
-					size="large"
-					color="primary"
-					onClick={() => {
-						nextCard();
-					}}
-				>
-					<SkipNextSharpIcon />
-				</IconButton>
+				{legacyMode && (
+					<IconButton
+						aria-label="next"
+						disabled={!learnMode && !(votedCorrect || votedIncorrect)}
+						variant="outlined"
+						size="large"
+						color="primary"
+						onClick={() => {
+							nextCard();
+						}}
+					>
+						<SkipNextSharpIcon />
+					</IconButton>
+				)}
+				{!legacyMode && (
+					<IconButton
+						aria-label="back"
+						variant="outlined"
+						size="large"
+						color="primary"
+						onClick={() => {
+							goBack();
+						}}
+					>
+						<ArrowBackIcon />
+					</IconButton>
+				)}
 
 				<IconButton
 					aria-label="correct"
@@ -62,6 +92,8 @@ const CardFooter = () => {
 					color="primary"
 					onClick={() => {
 						setCorrect(currentCard.vocabularyNo, true);
+						setRecentCards();
+						!legacyMode && nextCard();
 						console.log("CORRECT");
 					}}
 				>
@@ -74,6 +106,8 @@ const CardFooter = () => {
 					color="primary"
 					onClick={() => {
 						setCorrect(currentCard.vocabularyNo, false);
+						setRecentCards();
+						!legacyMode && nextCard();
 						console.log("INCORRECT");
 					}}
 				>

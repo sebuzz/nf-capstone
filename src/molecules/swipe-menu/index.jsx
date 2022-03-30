@@ -36,6 +36,8 @@ const SwipeableTemporaryDrawer = () => {
 	const toggleField = useStore(store => store.toggleField);
 	const cursive = useStore(store => store.cursive);
 	const setCursive = useStore(store => store.setCursive);
+	const legacyMode = useStore(store => store.legacyMode);
+	const setLegacyMode = useStore(store => store.setLegacyMode);
 
 	const list = () => (
 		<Box
@@ -118,6 +120,29 @@ const SwipeableTemporaryDrawer = () => {
 						<ListItemText primary="Cursive Font" />
 					</div>
 					{cursive && (
+						<div>
+							&nbsp; <Check />
+						</div>
+					)}
+				</ListItem>
+			</List>
+			<Divider />
+			<List>
+				<ListItem
+					button
+					onClick={() => {
+						setLegacyMode(!legacyMode);
+					}}
+				>
+					<ListItemIcon>
+						<h2>
+							<i>---</i>
+						</h2>
+					</ListItemIcon>
+					<div>
+						<ListItemText primary="Legacy Mode" />
+					</div>
+					{legacyMode && (
 						<div>
 							&nbsp; <Check />
 						</div>
